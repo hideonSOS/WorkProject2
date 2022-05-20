@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+
+.form_eria {
+  border: solid;
+  border-color: cyan;
+  border-width: 1px;
+  text-align: center;
+  position: relative;
+  width: 30%;
+  left: 33.33%;
+  margin: 10px 0;
+}
+
+.text_eria > input {
+  border: solid;
+  border-color: red;
+  border-width: 1px;
+  margin: 5px 0px;
+}
+
+.btn_eria {
+  border: solid;
+  border-color: greenyellow;
+  border-width: 1px;
+  margin: 10px 0px;
+}
+/*# sourceMappingURL=LoginStyle.css.map */

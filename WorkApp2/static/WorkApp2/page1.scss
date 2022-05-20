@@ -1,0 +1,225 @@
+$H1:43%;
+$H2:95%;
+$H3:30%;
+$H4:250%;
+
+$W1:98%;
+$W2:20%;
+
+$BC:white;
+$BC_alert:red;
+$BW:1px;
+
+
+html{
+    height:100%;
+}
+body{
+    height:100%;
+}
+.FirstArea{
+    border:solid;
+    border-color:$BC;
+    border-width:$BW;
+    position: relative;
+    width:$W1;
+    height: $H1;
+    text-align: center;
+    padding:1%;
+    >div{
+        border:solid;
+        border-width:$BW;
+        border-color:$BC;
+        display:inline-block;
+        width:$W2;
+        height:$H2;
+        overflow: hidden;
+    }
+}
+.SecondArea{
+    border:solid;
+    border-color:$BC;
+    border-width:$BW;
+    display:block;
+    position: relative;
+    width:$W1;
+    height:$H1;
+    text-align: center;
+    padding:1%;
+    >div{
+        display:inline-block;
+        position: relative;
+        border:solid;
+        border-width:$BW;
+        border-color:$BC;
+        height:$H2;
+        width:$W2;
+        
+    }
+}
+
+#one{
+    background-color: rgba(255,255,255,0.2);
+}
+
+#two{
+    background-color: rgba(10,10,10,0.2);
+}
+
+#three{
+    background-color: rgba(255,0,0,0.2);
+}
+#oneone{
+    background-color: rgba(0,0,255,0.2);
+}
+#twotwo{
+    background-color: rgba(255,255,0,0.2);
+}
+#threethree{
+    background-color: rgba(0,255,255,0.2);
+}
+@media only screen and (min-width:728px) and (max-width:3000px){
+    .FirstArea{
+        border:solid;
+        border-color:$BC;
+        border-width:$BW;
+        position: relative;
+        width:$W1;
+        height: $H1;
+        text-align: center;
+        padding:1%;
+        >div{
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            display:inline-block;
+            width:$W2;
+            height:$H2;
+            overflow: hidden;
+        }
+    }
+    .SecondArea{
+        border:solid;
+        border-color:$BC;
+        border-width:$BW;
+        display:block;
+        position: relative;
+        width:$W1;
+        height:$H1;
+        text-align: center;
+        padding:1%;
+        >div{
+            display:inline-block;
+            position: relative;
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            height:$H2;
+            width:$W2;
+            
+        }
+    }
+    #form{
+        border:solid;
+        border-color:greenyellow;
+        border-width:2px;
+        width:15%;
+    }
+    .TherdArea{
+        border:solid;
+        border-color:aqua;
+        border-width:2px;
+        &>div{
+            display: inline-block;
+        }
+    }
+}
+
+@media all and(max-width:728px){
+    .FirstArea{
+        border:solid;
+        border-color:$BC_alert;
+        border-width:$BW;
+        position: relative;
+        width:$W1;
+        height: $H4;
+        text-align: center;
+        padding:1%;
+        >div{
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            display:block;
+            width:$W1;
+            height:400px;
+
+            overflow: hidden;
+        }
+    }
+    .SecondArea{
+        border:solid;
+        border-color:$BC;
+        border-width:$BW;
+        display:inline-block;
+        position: relative;
+        width:$W1;
+        height:$H4;
+        text-align: center;
+        padding:1%;
+        top:100%;
+        >div{
+            display:block;
+            position: relative;
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            height:$H2;
+            width:$W1;
+            
+        }
+    }
+}
+@media all and(max-width:480px){
+    .FirstArea{
+        border:solid;
+        border-color:$BC_alert;
+        border-width:$BW;
+        position: relative;
+        width:$W1;
+        height: $H4;
+        text-align: center;
+        padding:1%;
+        >div{
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            display:block;
+            width:$W1;
+            height:400px;
+
+            overflow: hidden;
+        }
+    }
+    .SecondArea{
+        border:solid;
+        border-color:$BC;
+        border-width:$BW;
+        display:inline-block;
+        position: relative;
+        width:$W1;
+        height:$H4;
+        text-align: center;
+        padding:1%;
+        top:100%;
+        >div{
+            display:block;
+            position: relative;
+            border:solid;
+            border-width:$BW;
+            border-color:$BC;
+            height:$H2;
+            width:$W1;
+            
+        }
+    }
+}

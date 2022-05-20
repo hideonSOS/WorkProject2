@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'WorkApp2/LoginStyle.css' %}">
+</head>
+<body>
+{% if form.errors %}
+    <p>認証失敗</p>
+{% endif %}
+
+<div class="container">
+    <form action="" method="POST" class="form_eria">{% csrf_token %}
+        <div class="text_eria">
+            {{ form.username }}
+            {{ form.password }}
+        </div>
+        <div class="btn_eria">
+            <button type="submit" value="login">login</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

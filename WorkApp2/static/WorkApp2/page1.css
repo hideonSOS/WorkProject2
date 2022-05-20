@@ -1,0 +1,217 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.FirstArea {
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  position: relative;
+  width: 98%;
+  height: 43%;
+  text-align: center;
+  padding: 1%;
+}
+
+.FirstArea > div {
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  display: inline-block;
+  width: 20%;
+  height: 95%;
+  overflow: hidden;
+}
+
+.SecondArea {
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  display: block;
+  position: relative;
+  width: 98%;
+  height: 43%;
+  text-align: center;
+  padding: 1%;
+}
+
+.SecondArea > div {
+  display: inline-block;
+  position: relative;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  height: 95%;
+  width: 20%;
+}
+
+#one {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#two {
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+#three {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+#oneone {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+#twotwo {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+#threethree {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 728px) and (max-width: 3000px) {
+  .FirstArea {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    position: relative;
+    width: 98%;
+    height: 43%;
+    text-align: center;
+    padding: 1%;
+  }
+  .FirstArea > div {
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    display: inline-block;
+    width: 20%;
+    height: 95%;
+    overflow: hidden;
+  }
+  .SecondArea {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    display: block;
+    position: relative;
+    width: 98%;
+    height: 43%;
+    text-align: center;
+    padding: 1%;
+  }
+  .SecondArea > div {
+    display: inline-block;
+    position: relative;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    height: 95%;
+    width: 20%;
+  }
+  #form {
+    border: solid;
+    border-color: greenyellow;
+    border-width: 2px;
+    width: 15%;
+  }
+  .TherdArea {
+    border: solid;
+    border-color: aqua;
+    border-width: 2px;
+  }
+  .TherdArea > div {
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 728px) {
+  .FirstArea {
+    border: solid;
+    border-color: red;
+    border-width: 1px;
+    position: relative;
+    width: 98%;
+    height: 250%;
+    text-align: center;
+    padding: 1%;
+  }
+  .FirstArea > div {
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    display: block;
+    width: 98%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .SecondArea {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    display: inline-block;
+    position: relative;
+    width: 98%;
+    height: 250%;
+    text-align: center;
+    padding: 1%;
+    top: 100%;
+  }
+  .SecondArea > div {
+    display: block;
+    position: relative;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    height: 95%;
+    width: 98%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .FirstArea {
+    border: solid;
+    border-color: red;
+    border-width: 1px;
+    position: relative;
+    width: 98%;
+    height: 250%;
+    text-align: center;
+    padding: 1%;
+  }
+  .FirstArea > div {
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    display: block;
+    width: 98%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .SecondArea {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    display: inline-block;
+    position: relative;
+    width: 98%;
+    height: 250%;
+    text-align: center;
+    padding: 1%;
+    top: 100%;
+  }
+  .SecondArea > div {
+    display: block;
+    position: relative;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    height: 95%;
+    width: 98%;
+  }
+}
+/*# sourceMappingURL=page1.css.map */
