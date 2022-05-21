@@ -1,9 +1,7 @@
-function DrawGraph(datas,no) {
+function DrawGraph() {
         
     const labelon = ['１着','２着','３着','４着','５着','６着'];
     const linecolor = 'orange';
-    dataon = datas[no]
-    console.log(dataon)
     const linewidth=2;
     var dict = {
         //グラフの種類
@@ -12,9 +10,9 @@ function DrawGraph(datas,no) {
             　data: {
                 labels: labelon,
                 datasets: [{
-                label: no,
+                label: '未入力',
                 //グラフのデータ
-                data:[dataon['One'],dataon['Two'],dataon['Three'],dataon['Four'],dataon['Five'],dataon['Six']],
+                data:[0,0,0,0,0,0],
                 // データライン
                 borderColor: linecolor,
                 borderWidth:linewidth,
@@ -115,9 +113,40 @@ const SelectOn=(No)=>{
     }
     else if (No>=40 && No<50){alert(No+'号機はありません。');}
     
-    else if (No >=50 && No<=65){
+    else if (No >=50 && No<=84){
         NN=No-20;
         return MotorDict[NN]
     }
-    else if (No>65){alert(No+'号機はありません。');}
+    else if (No>84){alert(No+'号機はありません。');}
+}
+
+
+
+
+
+
+
+
+const OutputData = (IDs,BTN,INP)=>{
+    document.addEventListener('DOMContentLoaded', function() {
+      //描画
+      var ctx1 = document.getElementById(IDs).getContext('2d');
+      // var SelectedData = SelectOn(12);
+      dict = DrawGraph();
+      var chart = new Chart(ctx1,dict);
+      //クリックイベント
+        document.getElementById(BTN).addEventListener('click',
+            function(){
+                const InputValue = document.getElementById(INP).value;
+                const SelectedData=SelectOn(InputValue);
+                chart.data.datasets[0].data=[SelectedData.One,SelectedData.Two,SelectedData.Three,SelectedData.Four,SelectedData.Five,SelectedData.Six];
+                chart.data.datasets[0].label = SelectedData.MotorNo+'号機';
+                console.log('chart.data >>> ',typeof(chart.data));
+                console.log(chart.data.datasets);
+                console.log('datasets[0] >>> ' ,chart.data.datasets[0]);
+                console.log('options >>> ' ,chart.options);
+                chart.update();
+            })
+
+    });
 }

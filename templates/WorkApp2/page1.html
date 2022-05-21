@@ -99,36 +99,22 @@
 
     <script src="{% static 'WorkApp2/page1_on.js' %}"></script>
     <script>
-        // DrawGraph3();
-        {% autoescape off %}
-            let MotorDict = {{ dict }};
-        {% endautoescape %}
-        console.log(MotorDict);
-        
-        
+    
+    {% autoescape off %}
+        let MotorDict = {{ dict }};
+    {% endautoescape %}
+    
+    
 
-        const Button1 = document.getElementById('btn1');
-        
-        const ButtonPush = (btnobj)=>{
-            
-            btnobj.addEventListener('click',()=>{
-                const InputValue = document.getElementById('inp1').value;
-                var ctx1 = document.getElementById("myRadarChart");
-                const a = SelectOn(InputValue);
+    OutputData('myRadarChart','btn1','inp1');
+    OutputData('myRadarChart2','btn2','inp2');
+    OutputData('myRadarChart3','btn3','inp3');
+    OutputData('myRadarChart4','btn4','inp4');
+    OutputData('myRadarChart5','btn5','inp5');
+    OutputData('myRadarChart6','btn6','inp6');
 
-                console.log('input>>>',InputValue);
-                console.log('a>>>',a);
-
-                dict = DrawGraph2(a);
-                try{var myRadarChart = new Chart(ctx1,dict);}
-                catch(e){
-                    console.log('test');
-                }
-                })
-        }
-
-        ButtonPush(Button1);
-        
+    
+    
     </script>
     
     <script src="{% static 'WorkApp2/page1.js' %}"></script>
