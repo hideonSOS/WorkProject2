@@ -1,5 +1,6 @@
 from helium import *
 from selenium.webdriver import ChromeOptions
+import chromedriver_binary
 import os 
 import re
 import pandas as pd
@@ -24,6 +25,7 @@ dict = {}
 
 def TestCroll(url,selectoron):
 	options=ChromeOptions()
+	options.add_argument('--disable-gpu')
 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	start_chrome(url,options=options)
