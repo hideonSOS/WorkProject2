@@ -1,1 +1,41 @@
 {% extends 'WorkApp2/template.html' %}
+{% load static %}
+{% block header %}
+    <link rel='stylesheet' href = "{% static 'WorkApp2/page3.css' %}">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script > </script>
+{% endblock %}
+
+{% block body %}
+    <div class = 'AreaOne'>
+        
+    <canvas id = 'bar'></canvas>
+    </div>
+    <script src="{% static 'WorkApp2/page3.js' %}"></script>
+    <script>
+    
+    {% autoescape off %}
+        let MotorDict = {{ dict }};
+    {% endautoescape %}
+
+    // try{MotorDict.forEach(element => console.log(element['name']));}
+    // catch{MotorDict.forEach(element => console.log(element.name));}
+
+    const namelist =[]
+    const valuelist=[]
+    const colorlist=[]
+    MotorDict.forEach(element => {namelist.push(element['No']+'位 > '+element['name'])});
+    MotorDict.forEach(element => {valuelist.push(element['average'])});
+    //カラーバーの色リスト、ボーダー
+    MotorDict.forEach(element => {colorlist.push(ReturnColor(element['average'],6.0))});
+    
+    var ctx1 = document.getElementById('bar').getContext('2d');
+    var dict = DrawGrapha(namelist,valuelist,colorlist);
+
+    var chart = new Chart(ctx1,dict);
+    console.log(MotorDict)
+
+    </script>
+{% endblock %}
+

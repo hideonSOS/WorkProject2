@@ -24,6 +24,11 @@ def page1(request):
 def page2(request):
     return render(request, 'WorkApp2/page2.html')
 
-
+from .scrapeon import TestCroll
 def page3(request):
-    return render(request, 'WorkApp2/page3.html')
+
+    url = 'https://www.boatrace-suminoe.jp/modules/raceinfo/?page=index_tokutenrank'
+    selector_str = 'body > main > div.l-mainWrap > div > div > ul > li > table > tbody > tr > td'
+    df = TestCroll(url,selector_str)
+    dict = df.to_dict('records')
+    return render(request, 'WorkApp2/page3.html',{'dict':dict})
