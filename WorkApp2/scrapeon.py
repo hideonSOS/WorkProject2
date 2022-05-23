@@ -1,7 +1,9 @@
 from helium import *
+from selenium.webdriver import ChromeOptions
 import os 
 import re
 import pandas as pd
+
 
 # os.chdir(r'C:\\Users\\matsuyama\\OneDrive')
 
@@ -21,7 +23,10 @@ def PickUpData(selector):
 dict = {}
 
 def TestCroll(url,selectoron):
-	start_chrome(url)
+	options=ChromeOptions()
+	options.add_argument('--headless')
+	options.add_argument('--no-sandbox')
+	start_chrome(url,options=options)
 	testlist =[]
 	elem = PickUpData(selectoron)
 	dict = {
