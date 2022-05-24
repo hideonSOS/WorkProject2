@@ -8,7 +8,8 @@ import pandas as pd
 
 # os.chdir(r'C:\\Users\\matsuyama\\OneDrive')
 
-
+chromedriver_path='/usr/bin/chromedriver'
+test_path = r'C:\\Users\\matsuyama\\OneDrive\\kaihatsu_v2\\WorkProject2\\Lib\\site-packages\\helium\\_impl\\webdrivers\\windows\\chromedriver.exe'
 
 def pick(str):
      start = re.compile('>')
@@ -28,7 +29,7 @@ def TestCroll(url,selectoron):
 	options.add_argument('--disable-gpu')
 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
-	start_chrome(url,options=options)
+	start_chrome(url,chromedriver_path, options=options)
 	testlist =[]
 	elem = PickUpData(selectoron)
 	dict = {
