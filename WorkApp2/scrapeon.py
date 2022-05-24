@@ -8,7 +8,7 @@ import pandas as pd
 
 # os.chdir(r'C:\\Users\\matsuyama\\OneDrive')
 
-chromedriver_path='/usr/bin/chromedriver'
+chromedriver_path='/usr/bin/chromedriver.exe'
 test_path = r'C:\\Users\\matsuyama\\OneDrive\\kaihatsu_v2\\WorkProject2\\Lib\\site-packages\\helium\\_impl\\webdrivers\\windows\\chromedriver.exe'
 
 def pick(str):
@@ -29,55 +29,59 @@ def TestCroll(url,selectoron):
 	options.add_argument('--disable-gpu')
 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
-	start_chrome(url,chromedriver_path, options=options)
-	testlist =[]
-	elem = PickUpData(selectoron)
-	dict = {
-	'No':[],
-	'toban':[],
-	'name':[],
-	'rank':[],
-	'average':[],
-	'point':[],
-	'accident':[],
-	'totalrun':[],
-	'result':[],
-	}
-	for i, a in enumerate(elem):
-		# print(str(a))/
-		if 'col1' in str(a):
-			dict['No'].append(pick(str(a)))
-		elif 'col2' in str(a):
-			dict['toban'].append(pick(str(a)))
-		elif 'col3' in str(a):
-			dict['name'].append(pick(str(a)))
-		elif 'col4' in str(a):
-			dict['rank'].append(pick(str(a)))
-		elif 'col5' in str(a):
-			dict['average'].append(pick(str(a)))
-		elif 'col6' in str(a):
-			dict['point'].append(pick(str(a)))
-		elif 'col7' in str(a):
-			dict['accident'].append(pick(str(a)))
-		elif 'col8' in str(a):
-			dict['totalrun'].append(pick(str(a)))
-		elif 'col9' in str(a):
-			dict['result'].append(pick(str(a)))	
-		else:
-			print(f' error >>> {str(a)}')
+	try:
+		start_chrome(url, chromedriver_path, options=options)
+		testlist =[]
+		elem = PickUpData(selectoron)
+		dict = {
+		'No':[],
+		'toban':[],
+		'name':[],
+		'rank':[],
+		'average':[],
+		'point':[],
+		'accident':[],
+		'totalrun':[],
+		'result':[],
+		}
+		for i, a in enumerate(elem):
+			# print(str(a))/
+			if 'col1' in str(a):
+				dict['No'].append(pick(str(a)))
+			elif 'col2' in str(a):
+				dict['toban'].append(pick(str(a)))
+			elif 'col3' in str(a):
+				dict['name'].append(pick(str(a)))
+			elif 'col4' in str(a):
+				dict['rank'].append(pick(str(a)))
+			elif 'col5' in str(a):
+				dict['average'].append(pick(str(a)))
+			elif 'col6' in str(a):
+				dict['point'].append(pick(str(a)))
+			elif 'col7' in str(a):
+				dict['accident'].append(pick(str(a)))
+			elif 'col8' in str(a):
+				dict['totalrun'].append(pick(str(a)))
+			elif 'col9' in str(a):
+				dict['result'].append(pick(str(a)))	
+			else:
+				print(f' error >>> {str(a)}')
 
-	df = pd.DataFrame()
-	df['No']=dict['No']
-	df['toban']=dict['toban']
-	df['name']=dict['name']
-	df['rank']=dict['rank']
-	df['average']=dict['average']
-	df['point']=dict['point']
-	df['accident']=dict['accident']
-	df['totalrun']=dict['totalrun']
-	df['result']=dict['result']
-	
-	kill_browser()
+		df = pd.DataFrame()
+		df['No']=dict['No']
+		df['toban']=dict['toban']
+		df['name']=dict['name']
+		df['rank']=dict['rank']
+		df['average']=dict['average']
+		df['point']=dict['point']
+		df['accident']=dict['accident']
+		df['totalrun']=dict['totalrun']
+		df['result']=dict['result']
+		
+		kill_browser()
+	except():
+		kill_browser()
+		print('接続エラー')
 	return df
 	
 # testelem = TestCroll(url3,selector_str)
