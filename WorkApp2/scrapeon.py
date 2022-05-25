@@ -4,6 +4,7 @@ import chromedriver_binary
 import os 
 import re
 import pandas as pd
+import time
 
 
 # os.chdir(r'C:\\Users\\matsuyama\\OneDrive')
@@ -32,6 +33,7 @@ def TestCroll(url,selectoron):
 	try:
 		start_chrome(url, chromedriver_path, options=options)
 		testlist =[]
+		time.sleep(10)
 		elem = PickUpData(selectoron)
 		dict = {
 		'No':[],
@@ -79,10 +81,13 @@ def TestCroll(url,selectoron):
 		df['result']=dict['result']
 		
 		kill_browser()
+		time.sleep(10)
 	except:
+		time.sleep(10)
 		kill_browser()
 		print('接続エラー')
 		df = pd.DataFrame()
+		time.sleep(10)
 	return df
 	
 # testelem = TestCroll(url3,selector_str)
