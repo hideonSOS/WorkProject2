@@ -12,11 +12,11 @@ chromedriver_path='/usr/bin/chromedriver.exe'
 test_path = r'C:\\Users\\matsuyama\\OneDrive\\kaihatsu_v2\\WorkProject2\\Lib\\site-packages\\helium\\_impl\\webdrivers\\windows\\chromedriver.exe'
 
 def pick(str):
-     start = re.compile('>')
-     str1 = start.split(str)[1]
-     end = re.compile('<')
-     str2 = end.split(str1)[0]
-     return str2
+	start = re.compile('>')
+	str1 = start.split(str)[1]
+	end = re.compile('<')
+	str2 = end.split(str1)[0]
+	return str2
 
 def PickUpData(selector):
 	a_elm = find_all(S(selector))
@@ -26,7 +26,7 @@ dict = {}
 
 def TestCroll(url,selectoron):
 	options=ChromeOptions()
-	options.add_argument('--disable-gpu')
+	# options.add_argument('--disable-gpu')
 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	try:
@@ -79,7 +79,7 @@ def TestCroll(url,selectoron):
 		df['result']=dict['result']
 		
 		kill_browser()
-	except():
+	except:
 		kill_browser()
 		print('接続エラー')
 	return df
