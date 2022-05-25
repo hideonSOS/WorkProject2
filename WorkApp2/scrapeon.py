@@ -82,6 +82,7 @@ def TestCroll(url,selectoron):
 	except:
 		kill_browser()
 		print('接続エラー')
+		df = pd.DataFrame()
 	return df
 	
 # testelem = TestCroll(url3,selector_str)
