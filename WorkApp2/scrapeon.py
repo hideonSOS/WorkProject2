@@ -35,7 +35,10 @@ def TestCroll(url,selectoron):
 		start_chrome(url, chromedriver_path, options=options)
 		testlist =[]
 		time.sleep(10)
-		# elem = PickUpData(selectoron)
+		elem = PickUpData(selectoron)
+		for i in elem:
+			testlist.append(i)
+		df = pd.DataFrame(testlist)
 		# dict = {
 		# 'No':[],
 		# 'toban':[],
@@ -80,7 +83,7 @@ def TestCroll(url,selectoron):
 		# df['accident']=dict['accident']
 		# df['totalrun']=dict['totalrun']
 		# df['result']=dict['result']
-		
+		df = pd.DataFrame()
 		kill_browser()
 		time.sleep(10)
 	except:
@@ -89,7 +92,7 @@ def TestCroll(url,selectoron):
 		print('接続エラー')
 		df = pd.DataFrame()
 		time.sleep(10)
-	# return df
+	return df
 	
 # testelem = TestCroll(url3,selector_str)
 
