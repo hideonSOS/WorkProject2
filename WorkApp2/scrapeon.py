@@ -9,7 +9,7 @@ import time
 
 # os.chdir(r'C:\\Users\\matsuyama\\OneDrive')
 
-chromedriver_path='/usr/bin/chromedriver.exe'
+chromedriver_path='/home/kaihatsu/lib/python3.8/site-packages/helium/_impl/webdrivers/linux/chromedriver.exe'
 test_path = r'C:\\Users\\matsuyama\\OneDrive\\kaihatsu_v2\\WorkProject2\\Lib\\site-packages\\helium\\_impl\\webdrivers\\windows\\chromedriver.exe'
 
 def pick(str):
@@ -30,6 +30,7 @@ def TestCroll(url,selectoron):
 	# options.add_argument('--disable-gpu')
 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
+	options.add_argument("--disable-dev-shm-usage")
 	try:
 		start_chrome(url, chromedriver_path, options=options)
 		testlist =[]
