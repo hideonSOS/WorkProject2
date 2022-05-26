@@ -84,7 +84,7 @@ def TestCroll(url,selectoron):
 		# df['totalrun']=dict['totalrun']
 		# df['result']=dict['result']
 		df = pd.DataFrame()
-		kill_browser()
+		# kill_browser()
 		time.sleep(10)
 	except:
 		time.sleep(10)
@@ -92,7 +92,7 @@ def TestCroll(url,selectoron):
 		print('接続エラー')
 		df = pd.DataFrame()
 		time.sleep(10)
-	return df
+	# return df
 	
 # testelem = TestCroll(url3,selector_str)
 
