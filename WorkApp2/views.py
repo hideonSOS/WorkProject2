@@ -28,13 +28,14 @@ def page2(request):
     selector1='body > main >div>div>div>table>tbody>tr>td>a'
     selector2='body > main >div>div>div>table>tbody>tr>td'
 
-    elems = MyFunction.DataCroll(target_url,selector2)
-    elemdict = MyFunction2.SelectElems(elems)
+    # elems = MyFunction.DataCroll(target_url,selector2)
+    # elemdict = MyFunction2.SelectElems(elems)
     
     MotorDict = {
         # 'label':MyFunction.PickUpElementList(MyFunction.DataCroll(target_url,selector1)),
         'label':[i for i in range(65)],
-        'twoave':MyFunction.PickUpElementList(elemdict['twoave'])
+        # 'twoave':MyFunction.PickUpElementList(elemdict['twoave'])
+        'twoave':[i for i in range(65)]
     } 
     print(len(MotorDict['label']))
     
