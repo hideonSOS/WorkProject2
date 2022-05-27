@@ -34,8 +34,8 @@ def page2(request):
     MotorDict = {
         'label':MyFunction.PickUpElementList(MyFunction.DataCroll(target_url,selector1)),
         # 'label':[i for i in range(65)],
-        'twoave':[float(i) for i in MyFunction.PickUpElementList(elemdict['twoave'])],
-        # 'twoave':[i for i in range(65)]
+        'test':[float(i) for i in MyFunction.PickUpElementList(elemdict['twoave'])],
+        'twoave':[i for i in range(65)]
     } 
     print(len(MotorDict['label']))
     
