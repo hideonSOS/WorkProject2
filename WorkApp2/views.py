@@ -30,13 +30,11 @@ def page2(request):
     elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
     elemdict = MyFunction2.SelectElems(elems)
 
-        
-    # print(l_odd)
     MotorDict = {
         'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
         'twoave':elemdict['twoave']
     }
-    print(MotorDict['label'],MotorDict['twoave'])
+    
 
     return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
     # return render(request, 'WorkApp2/page2.html')

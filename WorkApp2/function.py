@@ -19,6 +19,5 @@ def SelectElems(elems):
         #     dict['c'].append(elem)
         # elif (i % 17==11) or (i==11):
         #     dict['d'].append(elem)
-    print(dict)
     
     return dict
