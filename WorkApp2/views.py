@@ -28,7 +28,7 @@ def page2(request):
     selector1='body > main >div>div>div>table>tbody>tr>td>a'
     selector2='body > main >div>div>div>table>tbody>tr>td'
 
-    # elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
+    elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
     # elemdict = MyFunction2.SelectElems(elems)
 
     MotorDict = {
