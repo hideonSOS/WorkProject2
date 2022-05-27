@@ -12,16 +12,8 @@ import time
 chromedriver_path='/home/kaihatsu/lib/python3.8/site-packages/helium/_impl/webdrivers/linux/chromedriver.exe'
 test_path = r'C:\\Users\\matsuyama\\OneDrive\\kaihatsu_v2\\WorkProject2\\Lib\\site-packages\\helium\\_impl\\webdrivers\\windows\\chromedriver.exe'
 
-def PickupElementLists(stron):
-	start = re.compile('>')
-	# stra = [start.split(i)[1] for i in stron]
-	print(stron)
-	print(len(stron))
-	end = re.compile('<')
-	# str2 = [end.split(i)[0] for i in stra]
-	# return str2
 
-def PickupElementList(stron):
+def PickUpElementList(stron):
 	start = re.compile('>')
 	stra = [start.split(i)[1] for i in stron]
 	end = re.compile('<')

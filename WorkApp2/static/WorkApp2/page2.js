@@ -1,5 +1,5 @@
 const DrawGraph2=(dataon)=> {
-    console.log(dataon)
+    
     dict={
         type: 'bar',
         data: {

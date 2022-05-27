@@ -28,17 +28,17 @@ def page2(request):
     selector1='body > main >div>div>div>table>tbody>tr>td>a'
     selector2='body > main >div>div>div>table>tbody>tr>td'
 
-    elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
-    # elemdict = MyFunction2.SelectElems(elems)
-
-    MotorDict = {
-        'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
-        # 'twoave':elemdict['twoave']
-    } 
-
+    elems = MyFunction.DataCroll(target_url,selector2)
+    elemdict = MyFunction2.SelectElems(elems)
     
-    # return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
-    return render(request, 'WorkApp2/page2.html')
+    MotorDict = {
+        'label':MyFunction.PickUpElementList(MyFunction.DataCroll(target_url,selector1)),
+        'twoave':MyFunction.PickUpElementList(elemdict['twoave'])
+    } 
+    print(MotorDict)
+    
+    return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
+    # return render(request, 'WorkApp2/page2.html')
 
 
 def page3(request):

@@ -20,12 +20,12 @@
     <script>
     
     {% autoescape off %}
-        // const MotorData={{ MotorDict }}
+        const MotorData={{ MotorDict }}
     {% endautoescape %}
     
     var ctx1 = document.getElementById('bar').getContext('2d');
-    // var dict = DrawGraph2(MotorData);
-    var dict = TestDrawGraph();
+    var dict = DrawGraph2(MotorData);
+    // var dict = TestDrawGraph();
     var chart = new Chart(ctx1,dict);
     </script>
     
