@@ -23,7 +23,7 @@ def PickUpData(selector):
 	a_elm = find_all(S(selector))
 	return a_elm
 
-dict = {}
+
 
 def TestCroll(url,selectoron):
 	options=ChromeOptions()
@@ -33,12 +33,12 @@ def TestCroll(url,selectoron):
 	options.add_argument("--disable-dev-shm-usage")
 	try:
 		start_chrome(url, chromedriver_path, options=options)
-		testlist =[]
-		time.sleep(10)
 		elem = PickUpData(selectoron)
-		for i in elem:
-			testlist.append(i)
-		df = pd.DataFrame(testlist)
+	
+		dict={'test':str(elem)}
+		print(f'scrapeon >>> {dict["test"]}')
+		# for i in elem:
+    	# 	print(i)
 		# dict = {
 		# 'No':[],
 		# 'toban':[],
@@ -83,16 +83,15 @@ def TestCroll(url,selectoron):
 		# df['accident']=dict['accident']
 		# df['totalrun']=dict['totalrun']
 		# df['result']=dict['result']
-		df = pd.DataFrame()
-		# kill_browser()
-		time.sleep(10)
+		# df = pd.DataFrame()
+		kill_browser()
+		print('success')
 	except:
-		time.sleep(10)
 		kill_browser()
 		print('接続エラー')
 		df = pd.DataFrame()
-		time.sleep(10)
-	# return df
+
+	return dict
 	
 # testelem = TestCroll(url3,selector_str)
 

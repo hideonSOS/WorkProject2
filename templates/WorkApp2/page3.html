@@ -4,17 +4,22 @@
     <link rel='stylesheet' href = "{% static 'WorkApp2/page3.css' %}">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
-    <script > </script>
+    <script> </script>
 {% endblock %}
 
 {% block body %}
+
+    <p>{{ dict.test }}</p>
+    <p>test</p>
     <div class = 'AreaOne'>
         
     <canvas id = 'bar'></canvas>
     </div>
     <script src="{% static 'WorkApp2/page3.js' %}"></script>
+
     <script>
-    
+
+
     {% autoescape off %}
         let MotorDict = {{ dict }};
     {% endautoescape %}

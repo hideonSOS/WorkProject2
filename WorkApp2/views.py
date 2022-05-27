@@ -28,9 +28,14 @@ from .scrapeon import TestCroll
 def page3(request):
 
     url = 'https://www.boatrace-suminoe.jp/modules/raceinfo/?page=index_tokutenrank'
-    selector_str = 'body > main > div.l-mainWrap > div > div > ul > li > table > tbody > tr > td'
-    df = TestCroll(url,selector_str)
+    selector_str = 'body > main > div'
+    dict = TestCroll(url,selector_str)
+    print(f'viewside >>> {dict["test"]}')
+    for i in dict['test']:
+        print(i)
     # TestCroll(url,selector_str)
+    # print(dict['test'])
     # dict = df.to_dict('records')
-    # return render(request, 'WorkApp2/page3.html',{'dict':dict})
-    return render(request, 'WorkApp2/page3.html')
+    # dict={'test':df}
+    return render(request, 'WorkApp2/page3.html',{'dict':dict})
+    # return render(request, 'WorkApp2/page3.html')
