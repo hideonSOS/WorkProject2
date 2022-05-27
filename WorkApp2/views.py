@@ -26,16 +26,18 @@ def page2(request):
 
     target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
     selector1='body > main >div>div>div>table>tbody>tr>td>a'
-    selector2='body > main >div>div>div>table>tbody>tr>td'
+    # selector2='body > main >div>div>div>table>tbody>tr>td'
+    selector2 = 'body > main >div>div>div>table>tbody>tr>td:nth-child(2)'
 
     elems = MyFunction.DataCroll(target_url,selector2)
-    elemdict = MyFunction2.SelectElems(elems)
+    
+    # elemdict = MyFunction2.SelectElems(elems)
     
     MotorDict = {
         'label':MyFunction.PickUpElementList(MyFunction.DataCroll(target_url,selector1)),
         # 'label':[i for i in range(65)],
-        'test':[float(i) for i in MyFunction.PickUpElementList(elemdict['twoave'])],
-        'twoave':[i for i in range(65)]
+        'twoave':[float(i) for i in MyFunction.PickUpElementList(elems)],
+        # 'twoave':[i for i in range(65)]
     } 
     print(len(MotorDict['label']))
     
