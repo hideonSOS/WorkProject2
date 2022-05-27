@@ -22,7 +22,7 @@
     {% autoescape off %}
         const MotorData={{ MotorDict }}
     {% endautoescape %}
-    
+    console.log(MotorData['test'])
     var ctx1 = document.getElementById('bar').getContext('2d');
     var dict = DrawGraph2(MotorData);
     // var dict = TestDrawGraph();
