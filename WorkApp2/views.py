@@ -24,17 +24,17 @@ from . import scrapeon as MyFunction  # scrapeonモジュール
 from . import function as MyFunction2 # functionモジュール
 def page2(request):
 
-    # target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
-    # selector1='body > main >div>div>div>table>tbody>tr>td>a'
-    # selector2='body > main >div>div>div>table>tbody>tr>td'
+    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
+    selector1='body > main >div>div>div>table>tbody>tr>td>a'
+    selector2='body > main >div>div>div>table>tbody>tr>td'
 
-    # elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
-    # elemdict = MyFunction2.SelectElems(elems)
+    elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
+    elemdict = MyFunction2.SelectElems(elems)
 
-    # MotorDict = {
-    #     'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
-    #     'twoave':elemdict['twoave']
-    # } 
+    MotorDict = {
+        'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
+        'twoave':elemdict['twoave']
+    } 
 
     
     # return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
