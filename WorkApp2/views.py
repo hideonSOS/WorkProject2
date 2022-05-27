@@ -23,28 +23,29 @@ def page1(request):
 from . import scrapeon as MyFunction  # scrapeonモジュール 
 from . import function as MyFunction2 # functionモジュール
 def page2(request):
-    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
-    selector1='body > main >div>div>div>table>tbody>tr>td>a'
-    selector2='body > main >div>div>div>table>tbody>tr>td'
-    
-    elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
-    elemdict = MyFunction2.SelectElems(elems)
 
-    MotorDict = {
-        'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
-        'twoave':elemdict['twoave']
-    }
-    
+    # target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
+    # selector1='body > main >div>div>div>table>tbody>tr>td>a'
+    # selector2='body > main >div>div>div>table>tbody>tr>td'
 
-    return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
-    # return render(request, 'WorkApp2/page2.html')
+    # elems = MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector2))
+    # elemdict = MyFunction2.SelectElems(elems)
+
+    # MotorDict = {
+    #     'label':MyFunction.PickupElementList(MyFunction.DataCroll(target_url,selector1)),
+    #     'twoave':elemdict['twoave']
+    # } 
+
+    
+    # return render(request, 'WorkApp2/page2.html',{'MotorDict':MotorDict})
+    return render(request, 'WorkApp2/page2.html')
 
 
 def page3(request):
     target_url = 'https://www.boatrace-suminoe.jp/modules/raceinfo/?page=index_tokutenrank'
     selector = 'body > main > div'
     dict = MyFunction.DataCroll(target_url,selector)
-    print(f'viewside >>> {dict["test"]}')
+    
 
     return render(request, 'WorkApp2/page3.html',{'dict':dict})
     # return render(request, 'WorkApp2/page3.html')
