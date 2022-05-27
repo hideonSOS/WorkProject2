@@ -54,8 +54,6 @@ const DrawGraph2=(datas)=> {
         
     const labelon = ['１着','２着','３着','４着','５着','６着'];
     const linecolor = 'orange';
-    
-
     const linewidth=2;
     var dict = {
         //グラフの種類
@@ -73,7 +71,6 @@ const DrawGraph2=(datas)=> {
                 padding:1,
                 boxHeight:100,
                 innerWidth:50,
-
                 }],
             },
             //オプションの設定
