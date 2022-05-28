@@ -15,18 +15,33 @@
             <p>{{ i }}</p>
         {% endfor %}
     </div>
-
+    <div class="BtnArea">
+        <button id='btn1'>２着率</button>
+        <button id='btn2'>１着率</button>
+        <button id='btn3'>１着回数</button>
+    </div>
     <script src="{% static 'WorkApp2/page2.js' %}"></script>
     <script>
     
     {% autoescape off %}
         const MotorData={{ MotorDict }}
     {% endautoescape %}
-    console.log(MotorData)
-    var ctx1 = document.getElementById('bar').getContext('2d');
-    var dict = DrawGraph2(MotorData);
+
+    DrawGraph3(MotorData,'twoave')
+  
+    // console.log(MotorData)
+    // var ctx1 = document.getElementById('bar').getContext('2d');
+    // const push = (datalist) =>{
+    //     var ctx1 = document.getElementById('bar').getContext('2d');
+    //     var dict=DrawGraph2(MotorData,datalist)
+    //     var chart = new Chart(ctx1,dict)
+    // }
+
+    // const Btn1Push = document.getElementById('btn1').addEventListener('click',()=>push('oneave'));
+    
+    // var dict = DrawGraph2(MotorData,'twoave');
     // var dict = TestDrawGraph();
-    var chart = new Chart(ctx1,dict);
+    // var chart = new Chart(ctx1,dict);
     </script>
     
 {% endblock %}
