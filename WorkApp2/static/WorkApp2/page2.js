@@ -13,47 +13,53 @@ const DrawGraph2=(dataon,datalist)=> {
                 borderColor: 'cyan',
                 backgroundColor:'rgba(0,255,255,0.3)',
                 borderWidth:0.3,
+                hoverBackgroundColor: 'cyan',
             }],
         },
         options: {
             responsive: false,
-            legend:{display:false},
+            legend: {                          //凡例設定
+                display: false                 //表示設定
+            },
+            title: {                           //タイトル設定
+                display: true,                 //表示設定
+                fontSize: 18,    
+                fontColor:'yellow',              //フォントサイズ
+                text: ' < ボートレース住之江 モーター２連対率 一覧 > ' ,               //ラベル
+            },
             scales:{
                 xAxes:[{
+                    barPercentage: 0.8,           //棒グラフ幅
+                    categoryPercentage: 0.5,
                     scaleLabel:{
-                        display:true,
-                        labelString:'横軸ラベル',
                         fontColor:'cyan',
-                        fontSize:16,
                     },
                     gridLines: {                   // 補助線
-                        color: "rgba(255, 0, 0, 0.2)", // 補助線の色
+                        color: "grey",
+                        lineWidth:0.5, // 補助線の色
                     },
                     ticks: {                      // 目盛り
-                        fontColor: "red",             // 目盛りの色
-                        fontSize: 14                  // フォントサイズ
+                        fontColor: "yellow",             // 目盛りの色
+                        fontSize: 12                  // フォントサイズ
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
                 {
-                    scaleLabel: {                  // 軸ラベル
-                        display: true,                 // 表示の有無
-                        labelString: '縦軸ラベル',     // ラベル
+                    scaleLabel: {                  // 軸ラベル               // 表示の有無
+                        // labelString: '縦軸ラベル',     // ラベル
+                        // fontFamily: "sans-serif",
+                        fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontColor: "blue",             // 文字の色
-                        fontFamily: "sans-serif",
-                        fontSize: 16                   // フォントサイズ
+                        fontSize: 12                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
-                        color: "rgba(0, 0, 255, 0.2)", // 補助線の色
-                        zeroLineColor: "black"         // y=0（Ｘ軸の色）
+                        color: "grey", // 補助線の色
+                        lineWidth:0.5,
+                        // zeroLineColor: "black"         // y=0（Ｘ軸の色）
                     },
                     ticks: {                       // 目盛り
-                        min: 0,                        // 最小値
-                        max: 25,                       // 最大値
-                        stepSize: 5,                   // 軸間隔
-                        fontColor: "blue",             // 目盛りの色
-                        fontSize: 14                   // フォントサイズ
+                        fontColor: "yellow",             // 目盛りの色
+                        fontSize: 12                   // フォントサイズ
                     }
                 }
             ]
@@ -102,14 +108,14 @@ const DrawGraph3 = (dataon,datalist)=>{
                 chart.data.datasets[0].data = dataon['twoave'];
                 chart.data.datasets[0].borderColor ='cyan';
                 chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
-                chart.data.datasets[0].label = '２連対立';
+                chart.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
                 chart.update();
             
             })
         document.getElementById('btn2').addEventListener('click',
             function(){
                 chart.data.datasets[0].data = dataon['oneave'];
-                chart.data.datasets[0].label ='１着率';
+                chart.options.title.text ='< ボートレース住之江 モーター勝率 一覧 >';
                 chart.data.datasets[0].borderColor ='lightgreen';
                 chart.data.datasets[0].backgroundColor ='rgba(0,255,100,0.3)';
                 chart.update();

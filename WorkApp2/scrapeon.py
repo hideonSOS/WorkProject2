@@ -64,6 +64,7 @@ def page3_Scraper(url,tag):
     'accident':[],
     'runcount':[],
     'result':[],
+    'label':[]
     }
 
     kijun = 9
@@ -87,12 +88,10 @@ def page3_Scraper(url,tag):
         elif i%kijun==8 or i==8:
             dict['result'].append(elem)
             
+    for name, runcount in zip(dict['name'],dict['runcount']):
+        dict['label'].append(str(runcount)+'走 '+name)
+    print(dict['label'])
     return dict
-
-
-	
-
-
 
 
 

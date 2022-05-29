@@ -3,7 +3,8 @@
 {% block header %}
     <link rel='stylesheet' href = "{% static 'WorkApp2/page3.css' %}">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script> </script>
 {% endblock %}
 
@@ -21,7 +22,7 @@
         let RankDictHtml = {{ RankDict }};
     {% endautoescape %}
     
-    DrawGraph3(RankDictHtml,'average')
+    DrawGraphonLoad(RankDictHtml,'average')
     
     // var ctx1 = document.getElementById('bar').getContext('2d');
     // var dict = TestDrawGraph();

@@ -1,61 +1,60 @@
-const DrawGraph2=(dataon,datalist)=> {
-    
+const DrawGraph=(dataon,datalist)=> {
     dict={
         type: 'bar',
         data: {
-            // labels: ['2015年', '2016年', '2017年', '2018年', '2019年', '2020年'],
-            labels:dataon['name'],
+            labels:dataon['label'],
             datasets: [{
                 label: "得点率",
-                // data: [127094745, 127041812, 126918546, 126748506, 126555078, 126146099],
                 data:dataon[datalist],
-                // data:[0 for i in range]
                 borderColor: 'lime',
                 Width:1,
-                backgroundColor:'rgba(0,255,120,0.5)',
-                borderWidth:0.3,
+                backgroundColor:'rgba(0,255,150,0.7)',
+                hoverBackgroundColor: 'yellow',
+                borderWidth:0.2,
             }],
         },
         options: {
-            responsive: false,
-            legend:{display:false},
+            responsive: true,
+            legend: {                          //凡例設定
+                display: false                 //表示設定
+            },
+            title: {                           //タイトル設定
+                display: true,                 //表示設定
+                fontSize: 18,    
+                fontColor:'yellow',              //フォントサイズ
+                text: '< 得 点 率 一 覧 >' ,               //ラベル
+            },
             scales:{
                 xAxes:[{
-                    barPercentage: 0.4,
+                    barPercentage: 0.8,           //棒グラフ幅
+                    categoryPercentage: 0.5,      //棒グラフ幅
                     scaleLabel:{
-                        display:true,
-                        labelString:'横軸ラベル',
-                        fontColor:'cyan',
-                        fontSize:16,
+                        fontColor:'yellow',
                     },
-                    gridLines: {                   // 補助線
-                        color: "rgba(255, 0, 0, 0.2)", // 補助線の色
+                    gridLines: {                  
+                        color: "grey", 
+                        lineWidth:0.5,
                     },
-                    ticks: {                      // 目盛り
-                        fontColor: "red",             // 目盛りの色
-                        fontSize: 14                  // フォントサイズ
+                    ticks: {                     
+                        fontColor: "yellow",    
+                        fontSize:8,
                     }   
                 }],
-                yAxes: [                           // Ｙ軸設定
+                yAxes: [                     
                 {
                     scaleLabel: {                  // 軸ラベル
-                        display: true,                 // 表示の有無
-                        labelString: '縦軸ラベル',     // ラベル
-                        fontFamily: "sans-serif",
-                        fontColor: "blue",             // 文字の色
-                        fontFamily: "sans-serif",
-                        fontSize: 16                   // フォントサイズ
+                        fontColor: "yellow",             // 文字の色
                     },
                     gridLines: {                   // 補助線
-                        color: "rgba(0, 0, 255, 0.2)", // 補助線の色
-                        zeroLineColor: "black"         // y=0（Ｘ軸の色）
+                        color: "grey", // 補助線の
+                        lineWidth:0.5,
                     },
                     ticks: {                       // 目盛り
-                        min: 0,                        // 最小値
-                        max: 25,                       // 最大値
-                        stepSize: 5,                   // 軸間隔
-                        fontColor: "blue",             // 目盛りの色
-                        fontSize: 14                   // フォントサイズ
+                        // min: 13,                        // 最小値
+                        max:12,  
+                                    // 最大値            // 軸間隔
+                        fontColor: "yellow",             // 目盛りの色
+                        fontSize: 24              // フォントサイズ
                     }
                 }
             ]
@@ -104,13 +103,11 @@ const ReturnColor = (datavalue,borderscore)=>{
 }
 
 
-
-
-const DrawGraph3 = (dataon,datalist)=>{
+const DrawGraphonLoad = (dataon,datalist)=>{
     document.addEventListener('DOMContentLoaded', function() {
 
     var ctx1 = document.getElementById('bar').getContext('2d');
-    dict = DrawGraph2(dataon,datalist);
+    dict = DrawGraph(dataon,datalist);
     var chart = new Chart(ctx1,dict);
     
         document.getElementById('btn1').addEventListener('click',
