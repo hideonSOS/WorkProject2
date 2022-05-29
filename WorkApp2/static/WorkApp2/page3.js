@@ -7,7 +7,7 @@ const DrawGraph=(dataon,datalist)=> {
                 label: "得点率",
                 data:dataon[datalist],
                 borderColor: 'lime',
-                Width:1,
+                // Width:1,
                 backgroundColor:'rgba(0,255,150,0.7)',
                 hoverBackgroundColor: 'yellow',
                 borderWidth:0.2,
@@ -26,7 +26,7 @@ const DrawGraph=(dataon,datalist)=> {
             },
             scales:{
                 xAxes:[{
-                    barPercentage: 0.8,           //棒グラフ幅
+                    // barPercentage: 0.8,           //棒グラフ幅
                     categoryPercentage: 0.5,      //棒グラフ幅
                     scaleLabel:{
                         fontColor:'yellow',

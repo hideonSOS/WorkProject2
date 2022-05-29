@@ -17,7 +17,7 @@ const DrawGraph2=(dataon,datalist)=> {
             }],
         },
         options: {
-            responsive: false,
+            responsive: true,
             legend: {                          //凡例設定
                 display: false                 //表示設定
             },
