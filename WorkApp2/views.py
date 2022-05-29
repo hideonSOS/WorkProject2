@@ -36,9 +36,13 @@ def page2(request):
 
 def page3(request):
     target_url = 'https://www.boatrace-suminoe.jp/modules/raceinfo/?page=index_tokutenrank'
-    selector = 'body > main > div'
-    dict = MyFunction.DataCroll(target_url,selector)
-    
-
-    return render(request, 'WorkApp2/page3.html',{'dict':dict})
+    selector = 'td'
+    RankDict = MyFunction.page3_Scraper(target_url,selector)
+    return render(request, 'WorkApp2/page3.html',{'RankDict':RankDict})
     # return render(request, 'WorkApp2/page3.html')
+
+def page4(request):
+    return render(request, 'WorkApp2/page4.html')
+
+def page5(request):
+    return render(request, 'WorkApp2/page5.html')

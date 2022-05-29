@@ -49,7 +49,45 @@ def Scraper(url,tag):
     return dict
 
 
+def page3_Scraper(url,tag):
+    html = requests.get(url)
+    soup = BeautifulSoup(html.content, 'html.parser')
+    elems = [i.text for i in soup.find_all(tag)]
 
+    dict={
+    'ranking':[],
+    'toban':[],
+    'name':[],
+    'class':[],
+    'average':[],
+    'point':[],
+    'accident':[],
+    'runcount':[],
+    'result':[],
+    }
+
+    kijun = 9
+    for i, elem in enumerate(elems):
+        if i % 9 == 0:
+            dict['ranking'].append(str(elem)+'位')
+        elif i%9==1 or i==1:
+            dict['toban'].append(elem)
+        elif i%kijun==2 or i==2:
+            dict['name'].append(elem)
+        elif i%kijun==3 or i==3:
+            dict['class'].append(elem)
+        elif i%kijun==4 or i==4:
+            dict['average'].append(elem)
+        elif i%kijun==5 or i==5:
+            dict['point'].append(elem)
+        elif i%kijun==6 or i==6:
+            dict['accident'].append(elem)
+        elif i%kijun==7 or i==7:
+            dict['runcount'].append(elem)
+        elif i%kijun==8 or i==8:
+            dict['result'].append(elem)
+            
+    return dict
 
 
 	

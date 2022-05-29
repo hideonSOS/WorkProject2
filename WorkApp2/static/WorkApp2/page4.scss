@@ -1,0 +1,53 @@
+.AreaOne{
+    border:solid;
+    border-color:white;
+    border-width:1px;
+    width:100%;
+    height:300px;
+    >div>:nth-child(1){
+        background-color: white;
+    }
+    >div>:nth-child(2){
+        background-color: black;
+    }
+    >div>:nth-child(3){
+        background-color: red;
+    }
+    >div>:nth-child(4){
+        background-color: blue;
+    }
+    >div>:nth-child(5){
+        background-color: yellow;
+    }
+    >div>:nth-child(6){
+        background-color: green;
+    }
+}
+.AreaTwo{
+    margin-top:80px;
+    border:solid;
+    border-color:white;
+    border-width:1px;
+    width:100%;
+    height:300px;
+}
+.AreaThree{
+    margin-top:80px;
+    border:solid;
+    border-color:white;
+    border-width:1px;
+    width:100%;
+    height:300px;
+}
+
+span{
+    display:inline-block;
+    border:solid;
+    border-color:cyan;
+    border-width:1px;
+    width:15%;
+    height:140px;
+    position: relative; 
+    margin: 0 auto;
+    
+}

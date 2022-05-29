@@ -10,11 +10,7 @@
     <div class="AreaOne">
         <canvas id='bar'></canvas>
     </div>
-    <div class="datas">
-        {% for i in MotorDict.one %}
-            <p>{{ i }}</p>
-        {% endfor %}
-    </div>
+    
     <div class="BtnArea">
         <button id='btn1'>２着率</button>
         <button id='btn2'>１着率</button>
@@ -28,18 +24,9 @@
     {% endautoescape %}
 
     DrawGraph3(MotorData,'twoave')
-  
-    // console.log(MotorData)
-    // var ctx1 = document.getElementById('bar').getContext('2d');
-    // const push = (datalist) =>{
-    //     var ctx1 = document.getElementById('bar').getContext('2d');
-    //     var dict=DrawGraph2(MotorData,datalist)
-    //     var chart = new Chart(ctx1,dict)
-    // }
 
-    // const Btn1Push = document.getElementById('btn1').addEventListener('click',()=>push('oneave'));
-    
-    // var dict = DrawGraph2(MotorData,'twoave');
+
+    // var ctx1 = document.getElementById('bar').getContext('2d');
     // var dict = TestDrawGraph();
     // var chart = new Chart(ctx1,dict);
     </script>
