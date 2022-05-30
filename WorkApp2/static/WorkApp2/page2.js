@@ -23,7 +23,7 @@ const DrawGraph2=(dataon,datalist)=> {
             },
             title: {                           //タイトル設定
                 display: true,                 //表示設定
-                fontSize: 18,    
+                fontSize: 14,    
                 fontColor:'yellow',              //フォントサイズ
                 text: ' < ボートレース住之江 モーター２連対率 一覧 > ' ,               //ラベル
             },
@@ -38,9 +38,10 @@ const DrawGraph2=(dataon,datalist)=> {
                         color: "grey",
                         lineWidth:0.5, // 補助線の色
                     },
-                    ticks: {                      // 目盛り
+                    ticks: {
+                        autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 12                  // フォントサイズ
+                        fontSize: 8                  // フォントサイズ
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
@@ -50,7 +51,7 @@ const DrawGraph2=(dataon,datalist)=> {
                         // fontFamily: "sans-serif",
                         fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontSize: 12                   // フォントサイズ
+                        fontSize: 8                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
                         color: "grey", // 補助線の色
@@ -59,7 +60,7 @@ const DrawGraph2=(dataon,datalist)=> {
                     },
                     ticks: {                       // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 12                   // フォントサイズ
+                        fontSize: 8                   // フォントサイズ
                     }
                 }
             ]

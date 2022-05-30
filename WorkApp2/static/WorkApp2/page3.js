@@ -20,7 +20,7 @@ const DrawGraph=(dataon,datalist)=> {
             },
             title: {                           //タイトル設定
                 display: true,                 //表示設定
-                fontSize: 18,    
+                fontSize: 8,    
                 fontColor:'yellow',              //フォントサイズ
                 text: '< 得 点 率 一 覧 >' ,               //ラベル
             },
@@ -35,7 +35,8 @@ const DrawGraph=(dataon,datalist)=> {
                         color: "grey", 
                         lineWidth:0.5,
                     },
-                    ticks: {                     
+                    ticks: {
+                        autoSkip:false,                     
                         fontColor: "yellow",    
                         fontSize:8,
                     }   
@@ -52,9 +53,9 @@ const DrawGraph=(dataon,datalist)=> {
                     ticks: {                       // 目盛り
                         // min: 13,                        // 最小値
                         max:12,  
-                                    // 最大値            // 軸間隔
+                                  // 軸間隔
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 24              // フォントサイズ
+                        fontSize: 18              // フォントサイズ
                     }
                 }
             ]
