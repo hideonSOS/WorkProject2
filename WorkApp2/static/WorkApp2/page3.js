@@ -20,7 +20,7 @@ const DrawGraph=(dataon,datalist)=> {
             },
             title: {                           //タイトル設定
                 display: true,                 //表示設定
-                fontSize: 8,    
+                fontSize: 24,    
                 fontColor:'yellow',              //フォントサイズ
                 text: '< 得 点 率 一 覧 >' ,               //ラベル
             },
@@ -52,7 +52,7 @@ const DrawGraph=(dataon,datalist)=> {
                     },
                     ticks: {                       // 目盛り
                         // min: 13,                        // 最小値
-                        max:12,  
+                        // max:12,  
                                   // 軸間隔
                         fontColor: "yellow",             // 目盛りの色
                         fontSize: 18              // フォントサイズ
@@ -113,22 +113,66 @@ const DrawGraphonLoad = (dataon,datalist)=>{
     
         document.getElementById('btn1').addEventListener('click',
             function(){
-                chart.data.datasets[0].data = dataon['average'];
-                chart.data.datasets[0].borderColor ='cyan';
-                chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
-                chart.data.datasets[0].label = '２連対立';
-                chart.update();
-            
-            })
-        document.getElementById('btn2').addEventListener('click',
-            function(){
-                chart.data.datasets[0].data = dataon['oneave'];
-                chart.data.datasets[0].label ='１着率';
-                chart.data.datasets[0].borderColor ='lightgreen';
-                chart.data.datasets[0].backgroundColor ='rgba(0,255,100,0.3)';
+                const border = document.getElementById('border').value
+                
+                chart.data.datasets[0].label= "総 得 点 >>> ";
+                chart.data.datasets[0].data = dataon['point'];
+                chart.data.datasets[0].borderColor ='orange';
+                chart.data.datasets[0].backgroundColor = 'rgba(255,0,255,0.3)';
+                chart.options.title.text='総 得 点 ';
                 chart.update();
                 
             })
+        document.getElementById('btn2').addEventListener('click',
+            function(){
+                chart.data.datasets[0].label= "総 得 率 >>> ";
+                chart.data.datasets[0].data = dataon['average'];
+                chart.data.datasets[0].borderColor ='lightgreen';
+                chart.data.datasets[0].backgroundColor ='cyan';
+                chart.options.title.text='得 点 率'
+                chart.update();
+               
+                
+            })
+        document.getElementById('btn3').addEventListener('click',()=>{
+            const BorderScore = document.getElementById('border').value;
+            const li = []
+            for (const i of dataon['runcount']){
+                li.push(parseFloat((Number(i)+1)*parseFloat(BorderScore)))
+            }
+            lion=[]
+            for (i=0; i<li.length; i++){
+                lion.push(li[i]-dataon['point'][i])
+            }
+            chart.data.datasets[0].label= "１ 走 必 要 得 点 >>> ";
+            chart.data.datasets[0].data = lion;
+            chart.data.datasets[0].borderColor ='lightgreen';
+            chart.data.datasets[0].backgroundColor ='orange';
+            chart.options.title.text='必要得点'
+            chart.update();
 
+            
+        })
+        document.getElementById('btn4').addEventListener('click',()=>{
+            const BorderScore = document.getElementById('border').value;
+            const li = []
+            for (const i of dataon['runcount']){
+                li.push(parseFloat((Number(i)+2)*parseFloat(BorderScore)))
+            }
+            lion=[]
+            for (i=0; i<li.length; i++){
+                lion.push(li[i]-dataon['point'][i])
+            }
+            chart.data.datasets[0].label= "２ 走 必 要 得 点 >>> ";
+            chart.data.datasets[0].data = lion;
+            chart.data.datasets[0].borderColor ='lightgreen';
+            chart.data.datasets[0].backgroundColor ='lightgreen';
+            chart.options.title.text='必要得点'
+            chart.update();
+
+        })
+        document.getElementById('btn5').addEventListener('click', ()=>{
+            alert('btn5.click')
+        })
     });
 }

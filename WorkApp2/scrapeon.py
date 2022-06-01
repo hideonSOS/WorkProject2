@@ -64,7 +64,7 @@ def page3_Scraper(url,tag):
     'accident':[],
     'runcount':[],
     'result':[],
-    'label':[]
+    'label':[],
     }
 
     kijun = 9
@@ -90,6 +90,8 @@ def page3_Scraper(url,tag):
             
     for name, runcount in zip(dict['name'],dict['runcount']):
         dict['label'].append(str(runcount)+'走 '+name)
+
+
     print(dict['label'])
     return dict
 
