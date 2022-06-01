@@ -74,7 +74,7 @@ def page3_Scraper(url,tag):
         elif i%9==1 or i==1:
             dict['toban'].append(elem)
         elif i%kijun==2 or i==2:
-            dict['name'].append(elem)
+            dict['name'].append(str(elem).replace('　　',' '))
         elif i%kijun==3 or i==3:
             dict['class'].append(elem)
         elif i%kijun==4 or i==4:
@@ -88,8 +88,8 @@ def page3_Scraper(url,tag):
         elif i%kijun==8 or i==8:
             dict['result'].append(elem)
             
-    for name, runcount in zip(dict['name'],dict['runcount']):
-        dict['label'].append(str(runcount)+'走 '+name)
+    for name, runcount,point in zip(dict['name'],dict['runcount'],dict['point']):
+        dict['label'].append(str(runcount)+'走 '+name +' ('+ str(point) + '点)')
 
 
     print(dict['label'])

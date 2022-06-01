@@ -1,36 +1,80 @@
-.AreaOne {
-  border: solid;
-  border-color: white;
-  border-width: 1px;
-  width: 100%;
-  height: 1200px;
-  overflow: hidden;
+@media all and (min-width: 1503px) and (max-width: 2000px) {
+  .AreaOne {
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+    width: 100%;
+    height: 950px;
+    overflow: hidden;
+  }
+  #bar {
+    margin: 0px auto 0px auto;
+    width: 70%;
+    border: solid;
+    border-color: red;
+    border-width: 1px;
+    color: white;
+    padding: 5px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    height: 50px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
+  }
 }
 
-#bar {
-  margin: 0px auto 0px auto;
-  width: 70%;
-  border: solid;
-  border-color: red;
-  border-width: 1px;
-  color: white;
-  padding: 5px;
+@media all and (min-width: 1280px) and (max-width: 1502px) {
+  .AreaOne {
+    height: 720px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+  }
 }
 
-.BtnArea {
-  margin-top: 10px;
-  border: solid;
-  border-color: white;
-  border-width: 1px;
-  height: 50px;
+@media all and (min-width: 1000px) and (max-width: 1279px) {
+  .AreaOne {
+    height: 620px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+  }
 }
 
-button {
-  background-color: yellow;
-  color: black;
-  border: black;
-  border-radius: 3px;
-  width: 70px;
-  margin: 13px 13px;
+@media all and (min-width: 780px) and (max-width: 999px) {
+  .AreaOne {
+    height: 470px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 779px) {
+  .AreaOne {
+    height: 356px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .AreaOne {
+    height: 210px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+  }
 }
 /*# sourceMappingURL=page3.css.map */

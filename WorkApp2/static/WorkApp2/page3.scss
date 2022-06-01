@@ -1,9 +1,21 @@
-.AreaOne{
+$mobileA-max:'2000px';
+$mobileA-min:'1503px';
+$mobileB-max:'1502px';
+$mobileB-min:'1280px';
+$mobileC-max:'1279px';
+$mobileC-min:'1000px';
+$mobileD-max:'999px';
+$mobileD-min:'780px';
+$mobileE-max:'779px';
+$mobileE-min:'480px';
+$mobileF-all:'480px';
+@media all and (min-width:$mobileA-min) and (max-width:$mobileA-max){
+    .AreaOne{
     border:solid;
     border-color:white;
-    border-width:1px;
+    border-width:10px;
     width:100%;
-    height:1200px;
+    height:950px;
     overflow: hidden;
     
 }
@@ -32,4 +44,51 @@ button{
     border-radius: 3px;
     width:70px;
     margin:13px 13px;
+}
+}
+@media all and (min-width:$mobileB-min) and (max-width:$mobileB-max){
+    .AreaOne{
+        height:720px;
+        border:solid;
+        border-color:cyan;
+        border-width:10px;
+
+    }
+}
+
+@media all and (min-width:$mobileC-min) and (max-width:$mobileC-max){
+    .AreaOne{
+        height:620px;
+        border:solid;
+        border-color:red;
+        border-width:10px;
+
+    }
+}
+@media all and (min-width:$mobileD-min) and (max-width:$mobileD-max){
+    .AreaOne{
+        height:470px;
+        border:solid;
+        border-color:yellow;
+        border-width:10px;
+
+    }
+}
+@media all and (min-width:$mobileE-min) and (max-width:$mobileE-max){
+    .AreaOne{
+        height:356px;
+        border:solid;
+        border-color:pink;
+        border-width:10px;
+
+    }
+}
+@media all and(max-width:$mobileF-all){
+    .AreaOne{
+        height:210px;
+        border:solid;
+        border-color:lightgreen;
+        border-width:10px;
+
+    }
 }

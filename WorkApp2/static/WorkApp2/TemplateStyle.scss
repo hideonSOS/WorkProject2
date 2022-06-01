@@ -33,10 +33,10 @@ nav{
     }
 }
 
-@media all and(max-width:480px){
-    body{
-        background: -webkit-radial-gradient(top, black, white);
-        // background-color: black;
-    }
-    
+@media all and (min-width:1000px) and (max-width:1334px){
+
+body{
+    background:-webkit-radial-gradient(top, blue,purple);
+}
+
 }
