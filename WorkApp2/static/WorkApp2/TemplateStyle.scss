@@ -1,3 +1,16 @@
+$mobileA-max:'2000px';
+$mobileA-min:'1503px';
+$mobileB-max:'1502px';
+$mobileB-min:'1280px';
+$mobileC-max:'1279px';
+$mobileC-min:'1000px';
+$mobileD-max:'999px';
+$mobileD-min:'780px';
+$mobileE-max:'779px';
+$mobileE-min:'480px';
+$mobileF-all:'480px';
+$mobileB-font:12px;
+$mobileE-font:8px;
 body{
     background:-webkit-radial-gradient(top,blue,purple);
     // background-color: black;
@@ -5,38 +18,186 @@ body{
     // background-color:black;
 }
 
-nav{
-    border:solid;
-    border-color:black;
-    border-width:1px 0;
-    height: 27px;
-    background:-webkit-radial-gradient(top,blue,black);
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    >span{
-        position: relative;
-        display:inline-block;
+@media all and (max-width:$mobileF-all){
+    nav{
         border:solid;
-        border-color:white;
-        border-width:1px 0;
-        width:10%;
-        height:25px;
-        margin:0;
-        text-align: center;
-        >a{
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            text-decoration:none;
-            font-size: 14px;
+        border-color:lightgreen;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $mobileE-font;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:14%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: $mobileE-font;
+            }
         }
     }
 }
 
-@media all and (min-width:1000px) and (max-width:1334px){
-
-body{
-    background:-webkit-radial-gradient(top, blue,purple);
+@media only screen and (min-width:$mobileA-min) and (max-width:$mobileA-max){
+    nav{
+        border:solid;
+        border-color:white;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:10%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: 14px;
+            }
+        }
+    }
 }
 
+
+@media all and (min-width:$mobileB-min) and (max-width:$mobileB-max){
+
+    nav{
+        border:solid;
+        border-color:cyan;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:10%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:$mobileC-min) and (max-width:$mobileC-max){
+    nav{
+        border:solid;
+        border-color:red;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:10%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:$mobileD-min) and (max-width:$mobileD-max){
+    nav{
+        border:solid;
+        border-color:yellow;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:$mobileB-font;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:10%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: $mobileB-font;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:$mobileE-min) and (max-width:$mobileE-max){
+    nav{
+        border:solid;
+        border-color:pink;
+        border-width:2.5px;
+        height: 27px;
+        background:-webkit-radial-gradient(top,blue,black);
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $mobileE-font;
+        >span{
+            position: relative;
+            display:inline-block;
+            border:solid;
+            border-color:white;
+            border-width:1px 0;
+            width:13%;
+            height:25px;
+            margin:0;
+            text-align: center;
+            >a{
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration:none;
+                font-size: $mobileE-font;
+            }
+        }
+    }
 }
