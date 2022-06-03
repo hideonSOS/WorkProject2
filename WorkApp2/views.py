@@ -15,18 +15,30 @@ class Login(LoginView):
 class Logout(LogoutView):
     template_name='WorkApp2/logout.html'
 
-def page1(request):
-    dict = Motor.return_dict()
-    return render(request, 'WorkApp2/page1.html',{'dict':dict})
-
-
 
 
 from . import scrapeon as MyFunction  # scrapeonモジュール 
+def page1(request):
+    dict={'one':[],'two':[]}
+    target_url ='http://www.boatrace-db.net/stadium/mdetail/pid/12/mno/11/'
+
+    if request.method=='POST':
+        mno = request.POST.get('input1')
+        target_url = 'http://www.boatrace-db.net/stadium/mdetail/pid/12/mno/'+str(mno)+'/'
+        target_tag = 'a'
+        target_url2 = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=8'
+        
+        dict['one'] = MyFunction.Scraper4(target_url,target_tag)
+        dict['two'] = MyFunction.Scraper(target_url2,'td')
+    else:
+        target_tag = 'a'
+        dict = MyFunction.Scraper4(target_url,target_tag)
+    return render(request, 'WorkApp2/page1.html',{'dict':dict})
+
 
 def page2(request):
 
-    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=7'
+    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=8'
     
     MotorDict=MyFunction.Scraper(target_url,'td')
     

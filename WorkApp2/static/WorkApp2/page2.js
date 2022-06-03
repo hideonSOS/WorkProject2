@@ -1,15 +1,11 @@
-const DrawGraph2=(dataon,datalist)=> {
-    
+const DrawGraph2=(dataon,datalist,type)=> {
     dict={
-        type: 'bar',
+        type: type,
         data: {
-            // labels: ['2015年', '2016年', '2017年', '2018年', '2019年', '2020年'],
             labels:dataon['no'],
             datasets: [{
                 label: "モーター性能",
-                // data: [127094745, 127041812, 126918546, 126748506, 126555078, 126146099],
                 data:dataon[datalist],
-                // data:[0 for i in range]
                 borderColor: 'cyan',
                 backgroundColor:'rgba(0,255,255,0.3)',
                 borderWidth:0.3,
@@ -17,7 +13,7 @@ const DrawGraph2=(dataon,datalist)=> {
             }],
         },
         options: {
-            responsive: true,
+            maintainAspectRatio:false,
             legend: {                          //凡例設定
                 display: false                 //表示設定
             },
@@ -29,10 +25,11 @@ const DrawGraph2=(dataon,datalist)=> {
             },
             scales:{
                 xAxes:[{
-                    barPercentage: 0.8,           //棒グラフ幅
-                    categoryPercentage: 0.5,
+                    // barPercentage: 10,     
+                    barThickness:15, 
+                    // categoryPercentage: 10,
                     scaleLabel:{
-                        fontColor:'cyan',
+                        fontColor:'yellow',
                     },
                     gridLines: {                   // 補助線
                         color: "grey",
@@ -41,17 +38,18 @@ const DrawGraph2=(dataon,datalist)=> {
                     ticks: {
                         autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 8                  // フォントサイズ
+                        fontSize: 15,
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
                 {
+                    // barPercentage: 1,     
+                    barThickness:10, 
+                    // categoryPercentage: 1,
                     scaleLabel: {                  // 軸ラベル               // 表示の有無
-                        // labelString: '縦軸ラベル',     // ラベル
-                        // fontFamily: "sans-serif",
                         fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontSize: 8                   // フォントサイズ
+                        fontSize: 15                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
                         color: "grey", // 補助線の色
@@ -60,7 +58,8 @@ const DrawGraph2=(dataon,datalist)=> {
                     },
                     ticks: {                       // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 8                   // フォントサイズ
+                        fontSize: 15,
+                                          // フォントサイズ
                     }
                 }
             ]
@@ -73,15 +72,17 @@ const DrawGraph2=(dataon,datalist)=> {
 const TestDrawGraph=()=> {
     dict={
         //下に辞書
-        type: 'bar',
+
+        type: 'horizontalBar',
             data: {
                 datasets: [{
                     label: 'First dataset',
-                    data: [0, 20, 40, 50]
+                    data: [30, 20, 40, 50]
                 }],
                 labels: ['January', 'February', 'March', 'April']
             },
             options: {
+                indexAxis:'y',
                 scales: {
                     y: {
                         suggestedMax: 100
@@ -101,8 +102,12 @@ const DrawGraph3 = (dataon,datalist)=>{
     document.addEventListener('DOMContentLoaded', function() {
 
     var ctx1 = document.getElementById('bar').getContext('2d');
-    dict = DrawGraph2(dataon,datalist);
+    dict = DrawGraph2(dataon,datalist,'bar');
     var chart = new Chart(ctx1,dict);
+
+    var ctx2 = document.getElementById('bartwo').getContext('2d');
+    dict2 = DrawGraph2(dataon,datalist,'horizontalBar');
+    var charton = new Chart(ctx2,dict2);
     
         document.getElementById('btn1').addEventListener('click',
             function(){
@@ -111,6 +116,11 @@ const DrawGraph3 = (dataon,datalist)=>{
                 chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
                 chart.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
                 chart.update();
+                charton.data.datasets[0].data = dataon['twoave'];
+                charton.data.datasets[0].borderColor ='cyan';
+                charton.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
+                charton.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
+                charton.update();
             
             })
         document.getElementById('btn2').addEventListener('click',
@@ -118,10 +128,19 @@ const DrawGraph3 = (dataon,datalist)=>{
                 chart.data.datasets[0].data = dataon['oneave'];
                 chart.options.title.text ='< ボートレース住之江 モーター勝率 一覧 >';
                 chart.data.datasets[0].borderColor ='lightgreen';
-                chart.data.datasets[0].backgroundColor ='rgba(0,255,100,0.3)';
+                chart.data.datasets[0].backgroundColor ='rgba(255,100,100,0.3)';
                 chart.update();
+                charton.data.datasets[0].data = dataon['oneave'];
+                charton.options.title.text ='< ボートレース住之江 モーター勝率 一覧 >';
+                charton.data.datasets[0].borderColor ='lightgreen';
+                charton.data.datasets[0].backgroundColor ='rgba(255,100,100,0.3)';
+                charton.update();
                 
             })
-
+            
+    
+    
+        
     });
 }
+

@@ -118,31 +118,22 @@ const SelectOn=(No)=>{
 }
 
 
-
-
-
-
-
-
 const OutputData = (IDs,BTN,INP)=>{
     document.addEventListener('DOMContentLoaded', function() {
       //描画
-      var ctx1 = document.getElementById(IDs).getContext('2d');
+    var ctx1 = document.getElementById(IDs).getContext('2d');
       // var SelectedData = SelectOn(12);
-      dict = DrawGraph();
-      var chart = new Chart(ctx1,dict);
+    dict = DrawGraph();
+    var chart = new Chart(ctx1,dict);
       //クリックイベント
         document.getElementById(BTN).addEventListener('click',
             function(){
                 const InputValue = document.getElementById(INP).value;
                 const SelectedData=SelectOn(InputValue);
-                chart.data.datasets[0].data=[SelectedData.One,SelectedData.Two,SelectedData.Three,SelectedData.Four,SelectedData.Five,SelectedData.Six];
-                chart.data.datasets[0].label = SelectedData.MotorNo+'号機';
-                console.log('chart.data >>> ',typeof(chart.data));
-                console.log(chart.data.datasets);
-                console.log('datasets[0] >>> ' ,chart.data.datasets[0]);
-                console.log('options >>> ' ,chart.options);
-                chart.update();
+                // chart.data.datasets[0].data=[SelectedData.One,SelectedData.Two,SelectedData.Three,SelectedData.Four,SelectedData.Five,SelectedData.Six];
+                // chart.data.datasets[0].label = SelectedData.MotorNo+'号機';
+                // chart.update();
+                // alert(InputValue)
             })
 
     });

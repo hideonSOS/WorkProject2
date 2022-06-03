@@ -97,3 +97,18 @@ def page3_Scraper(url,tag):
 
 
 
+def Scraper4(url,tag):
+    
+    headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36'}
+    html = requests.get(url,headers=headers)
+    soup = BeautifulSoup(html.content, 'html.parser')
+    
+    dict={
+    'name':[],
+    }
+    elems = soup.find_all(tag)
+    for i in elems:
+        if 'racer' in str(i):
+            dict['name'].append(str(i))
+    
+    return dict

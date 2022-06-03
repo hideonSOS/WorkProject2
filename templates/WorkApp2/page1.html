@@ -8,113 +8,44 @@
 
 {% block body %}
 
-    <div class="FirstArea">
+    <div class="AreaOne">
         <div id="one">
             <canvas id="myRadarChart"></canvas>
         </div>
-        <div id="two">
-            <canvas id="myRadarChart2"></canvas>
-        </div>
-        <div id="three">
-            <canvas id="myRadarChart3"></canvas>
+    </div>
+    
+    <div class='BtnArea'>
+        <div id='form'>
+            <div>
+                <form method='POST'>{% csrf_token %}
+                    <div>
+                        <input type="text" name="input1" id='inp1'>
+                    </div>
+                    <div>
+                        <button id ='btn1'>送信</button>
+                    </div>
+                </form>
+            </div>
+            
         </div>
     </div>
-    <div class="SecondArea">
-        <div id="oneone">
-            <canvas id="myRadarChart4"></canvas>
-        </div>
-        <div id="twotwo">
-            <canvas id="myRadarChart5"></canvas>
-        </div>
-        <div id="threethree">
-            <canvas id="myRadarChart6"></canvas>
-        </div>
+    <div class="AreaTwo">
+        {% for i in dict.one.name %}
+            <p>{{ i }}</p>
+        {% endfor %}
+        {% for i in dict.two %}
+            <p>{{ i }}</p>
+        {% endfor %}
+        {{ dict.two }}
     </div>
-    <div class='TherdArea'>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input1" id='inp1'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn1'>送信</button>
-            </div>
-        </div>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input2" id='inp2'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn2'>送信</button>
-            </div>
-        </div>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input3" id='inp3'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn3'>送信</button>
-            </div>
-        </div>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input4" id='inp4'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn4'>送信</button>
-            </div>
-        </div>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input5" id='inp5'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn5'>送信</button>
-            </div>
-        </div>
-        <div id='form'>
-            <div>
-                <form method='POST'>{% csrf_token %}
-                    <input type="text" name="input6" id='inp6'>
-                </form>
-            </div>
-            <div>
-                <button id ='btn6'>送信</button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
     <script src="{% static 'WorkApp2/page1_on.js' %}"></script>
     <script>
     
     {% autoescape off %}
-        let MotorDict = {{ dict }};
+        let MotorDict = {{ dict.two }};
     {% endautoescape %}
     
-    
-
     OutputData('myRadarChart','btn1','inp1');
-    OutputData('myRadarChart2','btn2','inp2');
-    OutputData('myRadarChart3','btn3','inp3');
-    OutputData('myRadarChart4','btn4','inp4');
-    OutputData('myRadarChart5','btn5','inp5');
-    OutputData('myRadarChart6','btn6','inp6');
-
-    
     
     </script>
     

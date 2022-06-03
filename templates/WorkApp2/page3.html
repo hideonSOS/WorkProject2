@@ -24,7 +24,13 @@
         <button id='btn5'>機能２</button>
         <button id='btn6'>機能３</button>
     </div>
-
+    <div class="AreaTwo">
+        <canvas id ='bartwo'></canvas>
+    </div>
+    <div class="BtnAreaTwo">
+        <input id='testid' type="text">
+        <button id='btn11'>test</button>
+    </div>
     <script src="{% static 'WorkApp2/page3.js' %}"></script>
 
     <script>
@@ -34,9 +40,14 @@
     
     DrawGraphonLoad(RankDictHtml,'average')
     
-    // var ctx1 = document.getElementById('bar').getContext('2d');
-    // var dict = TestDrawGraph();
-    // var chart = new Chart(ctx1,dict);
+    var ctx2 = document.getElementById('bartwo').getContext('2d');
+    var dict = TestDrawGraph();
+    var chart = new Chart(ctx2,dict);
+    
+    document.getElementById('btn11').addEventListener('click',()=>{
+        const testvalue = document.getElementById('testid').value;
+        alert(testvalue);
+    });
 
     </script>
 {% endblock %}

@@ -69,7 +69,7 @@ const TestDrawGraph=()=> {
     dict={
         //下に辞書
         
-type: 'bar',
+    type: 'bar',
     data: {
         datasets: [{
             label: 'First dataset',
@@ -131,7 +131,6 @@ const DrawGraphonLoad = (dataon,datalist)=>{
                 chart.data.datasets[0].backgroundColor ='cyan';
                 chart.options.title.text='得 点 率'
                 chart.update();
-               
                 
             })
         document.getElementById('btn3').addEventListener('click',()=>{
@@ -176,3 +175,4 @@ const DrawGraphonLoad = (dataon,datalist)=>{
         })
     });
 }
+

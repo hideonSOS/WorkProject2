@@ -1,4 +1,4 @@
-$mobileA-max:'2000px';
+$mobileA-max:'3000px';
 $mobileA-min:'1503px';
 $mobileB-max:'1502px';
 $mobileB-min:'1280px';
@@ -34,7 +34,7 @@ body{
             border:solid;
             border-color:white;
             border-width:1px 0;
-            width:14%;
+            width:10%;
             height:25px;
             margin:0;
             text-align: center;
@@ -90,13 +90,14 @@ body{
         color:white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
+        position: relative;
         >span{
             position: relative;
             display:inline-block;
             border:solid;
             border-color:white;
             border-width:1px 0;
-            width:10%;
+            width:14%;
             height:25px;
             margin:0;
             text-align: center;

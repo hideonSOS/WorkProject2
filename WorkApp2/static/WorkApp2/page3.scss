@@ -1,94 +1,231 @@
-$mobileA-max:'2000px';
-$mobileA-min:'1503px';
-$mobileB-max:'1502px';
-$mobileB-min:'1280px';
-$mobileC-max:'1279px';
-$mobileC-min:'1000px';
-$mobileD-max:'999px';
-$mobileD-min:'780px';
-$mobileE-max:'779px';
-$mobileE-min:'480px';
-$mobileF-all:'480px';
+$mobileA-color:white;
+$mobileA-max:3000px;
+$mobileA-min:1503px;
+$mobileA-height:880px;
+
+$mobileB-color:cyan;
+$mobileB-max:1502px;
+$mobileB-min:1280px;
+$mobileB-height:720px;
+
+$mobileC-color:red;
+$mobileC-max:1279px;
+$mobileC-min:1000px;
+$mobileC-height:620px;
+
+$mobileD-color:yellow;
+$mobileD-max:999px;
+$mobileD-min:780px;
+$mobileD-height:470px;
+
+$mobileE-color:pink;
+$mobileE-max:779px;
+$mobileE-min:480px;
+$mobileE-height:356px;
+
+$mobileF-color:lightgreen;
+$mobileF-all:480px;
+$mobileF-height:210px;
+
+
+
 @media all and (min-width:$mobileA-min) and (max-width:$mobileA-max){
     .AreaOne{
     border:solid;
-    border-color:white;
+    border-color:$mobileA-color;
     border-width:10px;
     // width:100%;
-    height:950px;
+    height:$mobileA-height;
     overflow: hidden;
+}
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileA-color;
+        border-width:10px;
+        height:$mobileA-height;
+    }
+    #bar{
+        margin:0px auto 0px auto;
+        width:70%;
+        border:solid;
+        border-color:red;
+        border-width:1px;
+        color:white;
+        padding: 5px;
+    }
+
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileA-color;
+        border-width:10px;
+        height:50px;
+    }
     
-}
-
-#bar{
-    margin:0px auto 0px auto;
-    width:70%;
-    border:solid;
-    border-color:red;
-    border-width:1px;
-    color:white;
-    padding: 5px;
-}
-
-.BtnArea{
-    margin-top:10px;
-    border:solid;
-    border-color:white;
-    border-width:1px;
-    height:50px;
-}
-button{
-    background-color:yellow;
-    color:black;
-    border:black;
-    border-radius: 3px;
-    width:70px;
-    margin:13px 13px;
-}
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
+    }
 }
 @media all and (min-width:$mobileB-min) and (max-width:$mobileB-max){
     .AreaOne{
-        height:720px;
+        height:$mobileB-height;
         border:solid;
-        border-color:cyan;
+        border-color:$mobileB-color;
         border-width:10px;
 
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileB-color;
+        border-width:10px;
+        height:$mobileB-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileB-color;
+        border-width:10px;
+        height:50px;
+    }
+    
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
     }
 }
 
 @media all and (min-width:$mobileC-min) and (max-width:$mobileC-max){
     .AreaOne{
-        height:620px;
+        height:$mobileC-height;
         border:solid;
-        border-color:red;
+        border-color:$mobileC-color;
         border-width:10px;
-
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:10px;
+        height:$mobileC-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:10px;
+        height:50px;
+    }
+    
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
     }
 }
 @media all and (min-width:$mobileD-min) and (max-width:$mobileD-max){
     .AreaOne{
-        height:470px;
+        height:$mobileD-height;
         border:solid;
-        border-color:yellow;
+        border-color:$mobileD-color;
         border-width:10px;
-
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:10px;
+        height:$mobileD-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:10px;
+        height:100px;
+    }
+    
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
     }
 }
 @media all and (min-width:$mobileE-min) and (max-width:$mobileE-max){
     .AreaOne{
-        height:356px;
+        height:$mobileE-height;
         border:solid;
-        border-color:pink;
+        border-color:$mobileE-color;
         border-width:10px;
-
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:10px;
+        height:$mobileE-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:10px;
+        height:100px;
+    }
+    
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
     }
 }
+
 @media all and(max-width:$mobileF-all){
     .AreaOne{
-        height:210px;
+        height:$mobileF-height;
         border:solid;
-        border-color:lightgreen;
+        border-color:$mobileF-color;
         border-width:10px;
-
+    }
+    .AreaTwo{
+        margin-top: 10px;
+        border:solid;
+        border-color:$mobileF-color;
+        border-width:10px;
+        height:$mobileF-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileF-color;
+        border-width:10px;
+        height:150px;
+    }
+    button{
+        background-color:yellow;
+        color:black;
+        border:black;
+        border-radius: 3px;
+        width:70px;
+        margin:13px 13px;
     }
 }

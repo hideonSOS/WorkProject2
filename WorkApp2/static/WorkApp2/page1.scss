@@ -1,225 +1,206 @@
-$H1:43%;
-$H2:95%;
-$H3:30%;
-$H4:250%;
+$BorderValue:10px;
 
-$W1:98%;
-$W2:20%;
+$mobileA-color:white;
+$mobileA-max:3000px;
+$mobileA-min:1503px;
+$mobileA-height:350px;
+$mobileA-height2:1600px;
 
-$BC:white;
-$BC_alert:red;
-$BW:1px;
+$mobileB-color:cyan;
+$mobileB-max:1502px;
+$mobileB-min:1280px;
+$mobileB-height:720px;
 
+$mobileC-color:red;
+$mobileC-max:1279px;
+$mobileC-min:1000px;
+$mobileC-height:620px;
 
-html{
-    height:100%;
+$mobileD-color:yellow;
+$mobileD-max:999px;
+$mobileD-min:780px;
+$mobileD-height:470px;
+
+$mobileE-color:pink;
+$mobileE-max:779px;
+$mobileE-min:480px;
+$mobileE-height:356px;
+
+$mobileF-color:lightgreen;
+$mobileF-all:480px;
+$mobileF-height:210px;
+
+button{
+    background-color: yellow;
+    border-radius:3px;
+    font-family:Arial;
 }
-body{
-    height:100%;
-}
-.FirstArea{
-    border:solid;
-    border-color:$BC;
-    border-width:$BW;
-    position: relative;
-    width:$W1;
-    height: $H1;
-    text-align: center;
-    padding:1%;
-    >div{
+
+
+@media all and (min-width:$mobileA-min) and (max-width:$mobileA-max){
+    .AreaOne{
+        margin-top:10px;
         border:solid;
-        border-width:$BW;
-        border-color:$BC;
-        display:inline-block;
-        width:$W2;
-        height:$H2;
-        overflow: hidden;
-    }
-}
-.SecondArea{
-    border:solid;
-    border-color:$BC;
-    border-width:$BW;
-    display:block;
-    position: relative;
-    width:$W1;
-    height:$H1;
-    text-align: center;
-    padding:1%;
-    >div{
-        display:inline-block;
-        position: relative;
-        border:solid;
-        border-width:$BW;
-        border-color:$BC;
-        height:$H2;
-        width:$W2;
-        
-    }
-}
-
-#one{
-    background-color: rgba(255,255,255,0.2);
-}
-
-#two{
-    background-color: rgba(10,10,10,0.2);
-}
-
-#three{
-    background-color: rgba(255,0,0,0.2);
-}
-#oneone{
-    background-color: rgba(0,0,255,0.2);
-}
-#twotwo{
-    background-color: rgba(255,255,0,0.2);
-}
-#threethree{
-    background-color: rgba(0,255,255,0.2);
-}
-@media only screen and (min-width:728px) and (max-width:3000px){
-    .FirstArea{
-        border:solid;
-        border-color:$BC;
-        border-width:$BW;
-        position: relative;
-        width:$W1;
-        height: $H1;
-        text-align: center;
-        padding:1%;
-        >div{
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            display:inline-block;
-            width:$W2;
-            height:$H2;
-            overflow: hidden;
+        border-color:$mobileA-color;
+        border-width:$BorderValue;
+        height:$mobileA-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:10px;
+            height:330px;
+            width:330px;
         }
     }
-    .SecondArea{
+    .BtnArea{
+        margin-top:10px;
         border:solid;
-        border-color:$BC;
-        border-width:$BW;
-        display:block;
-        position: relative;
-        width:$W1;
-        height:$H1;
-        text-align: center;
-        padding:1%;
-        >div{
-            display:inline-block;
-            position: relative;
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            height:$H2;
-            width:$W2;
-            
-        }
+        border-color:$mobileA-color;
+        border-width:$BorderValue;
     }
-    #form{
+    .AreaTwo{
+        margin-top:10px;
         border:solid;
-        border-color:greenyellow;
-        border-width:2px;
-        width:15%;
+        border-color:$mobileA-color;
+        border-width:$BorderValue;
+        height:$mobileA-height2;
     }
-    .TherdArea{
+
+    .BtnAreaTwo{
+        margin-top:10px;
         border:solid;
-        border-color:aqua;
-        border-width:2px;
-        &>div{
-            display: inline-block;
-        }
+        border-color:$mobileA-color;
+        border-width:$BorderValue;
     }
 }
 
-@media all and(max-width:728px){
-    .FirstArea{
+@media all and(min-width:$mobileB-min) and (max-width:$mobileB-max){
+    .AreaOne{
         border:solid;
-        border-color:$BC_alert;
-        border-width:$BW;
-        position: relative;
-        width:$W1;
-        height: $H4;
-        text-align: center;
-        padding:1%;
-        >div{
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            display:block;
-            width:$W1;
-            height:400px;
-
-            overflow: hidden;
-        }
+        border-color:$mobileB-color;
+        border-width:$BorderValue;
     }
-    .SecondArea{
+    .BtnArea{
+        margin-top:10px;
         border:solid;
-        border-color:$BC;
-        border-width:$BW;
-        display:inline-block;
-        position: relative;
-        width:$W1;
-        height:$H4;
-        text-align: center;
-        padding:1%;
-        top:100%;
-        >div{
-            display:block;
-            position: relative;
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            height:$H2;
-            width:$W1;
-            
-        }
+        border-color:$mobileB-color;
+        border-width:$BorderValue;
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileB-color;
+        border-width:$BorderValue;
+    }
+    .BtnAreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileB-color;
+        border-width:$BorderValue;
     }
 }
-@media all and(max-width:480px){
-    .FirstArea{
-        border:solid;
-        border-color:$BC_alert;
-        border-width:$BW;
-        position: relative;
-        width:$W1;
-        height: $H4;
-        text-align: center;
-        padding:1%;
-        >div{
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            display:block;
-            width:$W1;
-            height:400px;
 
-            overflow: hidden;
-        }
-    }
-    .SecondArea{
+@media all and (min-width:$mobileC-min) and (max-width:$mobileC-max){
+    .AreaOne{
         border:solid;
-        border-color:$BC;
-        border-width:$BW;
-        display:inline-block;
-        position: relative;
-        width:$W1;
-        height:$H4;
-        text-align: center;
-        padding:1%;
-        top:100%;
-        >div{
-            display:block;
-            position: relative;
-            border:solid;
-            border-width:$BW;
-            border-color:$BC;
-            height:$H2;
-            width:$W1;
-            
-        }
+        border-color:$mobileC-color;
+        border-width:$BorderValue;
     }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:$BorderValue;
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:$BorderValue;
+        height:5000px;
+    }
+
+    .BtnAreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:$BorderValue;
+    }
+}
+
+@media all and(min-width:$mobileD-min) and (max-width:$mobileD-max){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:$BorderValue;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:$BorderValue;
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:$BorderValue;
+    }
+    .BtnAreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:$BorderValue;
+    }
+}
+
+@media all and (min-width:$mobileE-min) and (max-width:$mobileE-max){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:$BorderValue;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:$BorderValue;
+    }
+    .AreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:$BorderValue;
+    }
+
+    .BtnAreaTwo{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:$BorderValue;
+    }
+}
+
+@media all and(max-width:$mobileF-all){
+    .AreaOne{
+        height:$mobileF-height;
+        border:solid;
+        border-color:$mobileF-color;
+        border-width:10px;
+    }
+    .AreaTwo{
+        margin-top: 10px;
+        border:solid;
+        border-color:$mobileF-color;
+        border-width:10px;
+        height:$mobileF-height;
+    }
+    .BtnArea{
+        margin-top:10px;
+        border:solid;
+        border-color:$mobileF-color;
+        border-width:10px;
+        height:150px;
+    }
+    
 }

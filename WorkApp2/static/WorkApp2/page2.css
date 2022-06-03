@@ -1,26 +1,162 @@
-.AreaOne {
-  border: solid;
-  border-color: white;
-  border-width: 1px;
-  width: 100%;
-  height: 1200px;
-  overflow: hidden;
+button {
+  background-color: yellow;
+  border-radius: 3px;
+  font-family: Arial;
 }
 
-#bar {
-  margin: 0px auto 0px auto;
-  width: 90%;
-  border: solid;
-  border-color: white;
-  border-width: 1px;
-  color: white;
-  padding: 10px;
+@media all and (min-width: 1503px) and (max-width: 3000px) {
+  .AreaOne {
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+    height: 880px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+    height: 1600px;
+  }
+  .BtnAreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+  }
 }
 
-.BtnArea {
-  border: solid;
-  border-color: white;
-  border-width: 1px;
-  margin-top: 20px;
+@media all and (min-width: 1280px) and (max-width: 1502px) {
+  .AreaOne {
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+  }
+  .BtnAreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+  }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1279px) {
+  .AreaOne {
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+    height: 5000px;
+  }
+  .BtnAreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+  }
+}
+
+@media all and (min-width: 780px) and (max-width: 999px) {
+  .AreaOne {
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+  }
+  .BtnAreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 779px) {
+  .AreaOne {
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+  }
+  .BtnAreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .AreaOne {
+    height: 210px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+    height: 210px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=page2.css.map */

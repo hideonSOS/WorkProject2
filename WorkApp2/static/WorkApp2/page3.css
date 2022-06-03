@@ -1,10 +1,17 @@
-@media all and (min-width: 1503px) and (max-width: 2000px) {
+@media all and (min-width: 1503px) and (max-width: 3000px) {
   .AreaOne {
     border: solid;
     border-color: white;
     border-width: 10px;
-    height: 950px;
+    height: 880px;
     overflow: hidden;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 10px;
+    height: 880px;
   }
   #bar {
     margin: 0px auto 0px auto;
@@ -19,7 +26,7 @@
     margin-top: 10px;
     border: solid;
     border-color: white;
-    border-width: 1px;
+    border-width: 10px;
     height: 50px;
   }
   button {
@@ -39,6 +46,28 @@
     border-color: cyan;
     border-width: 10px;
   }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+    height: 720px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: cyan;
+    border-width: 10px;
+    height: 50px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
+  }
 }
 
 @media all and (min-width: 1000px) and (max-width: 1279px) {
@@ -47,6 +76,28 @@
     border: solid;
     border-color: red;
     border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+    height: 620px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: red;
+    border-width: 10px;
+    height: 50px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
   }
 }
 
@@ -57,6 +108,28 @@
     border-color: yellow;
     border-width: 10px;
   }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+    height: 470px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: yellow;
+    border-width: 10px;
+    height: 100px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
+  }
 }
 
 @media all and (min-width: 480px) and (max-width: 779px) {
@@ -66,6 +139,28 @@
     border-color: pink;
     border-width: 10px;
   }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+    height: 356px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: pink;
+    border-width: 10px;
+    height: 100px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -74,6 +169,28 @@
     border: solid;
     border-color: lightgreen;
     border-width: 10px;
+  }
+  .AreaTwo {
+    margin-top: 10px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+    height: 210px;
+  }
+  .BtnArea {
+    margin-top: 10px;
+    border: solid;
+    border-color: lightgreen;
+    border-width: 10px;
+    height: 150px;
+  }
+  button {
+    background-color: yellow;
+    color: black;
+    border: black;
+    border-radius: 3px;
+    width: 70px;
+    margin: 13px 13px;
   }
 }
 /*# sourceMappingURL=page3.css.map */
