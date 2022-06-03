@@ -6,6 +6,7 @@ button {
 
 @media all and (min-width: 1503px) and (max-width: 3000px) {
   .AreaOne {
+    margin-top: 10px;
     border: solid;
     border-color: white;
     border-width: 10px;
