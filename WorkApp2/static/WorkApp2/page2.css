@@ -38,6 +38,7 @@ button {
     border: solid;
     border-color: cyan;
     border-width: 10px;
+    height: 720px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -64,6 +65,7 @@ button {
     border: solid;
     border-color: red;
     border-width: 10px;
+    height: 620px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -91,6 +93,7 @@ button {
     border: solid;
     border-color: yellow;
     border-width: 10px;
+    height: 470px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -117,6 +120,7 @@ button {
     border: solid;
     border-color: pink;
     border-width: 10px;
+    height: 356px;
   }
   .BtnArea {
     margin-top: 10px;
