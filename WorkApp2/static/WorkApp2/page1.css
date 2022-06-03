@@ -45,6 +45,8 @@ button {
     border: solid;
     border-color: cyan;
     border-width: 10px;
+    height: 330px;
+    width: 330px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -71,6 +73,8 @@ button {
     border: solid;
     border-color: red;
     border-width: 10px;
+    height: 330px;
+    width: 330px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -98,6 +102,8 @@ button {
     border: solid;
     border-color: yellow;
     border-width: 10px;
+    height: 330px;
+    width: 330px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -124,6 +130,8 @@ button {
     border: solid;
     border-color: pink;
     border-width: 10px;
+    height: 330px;
+    width: 330px;
   }
   .BtnArea {
     margin-top: 10px;
@@ -151,6 +159,8 @@ button {
     border: solid;
     border-color: lightgreen;
     border-width: 10px;
+    height: 330px;
+    width: 330px;
   }
   .AreaTwo {
     margin-top: 10px;
