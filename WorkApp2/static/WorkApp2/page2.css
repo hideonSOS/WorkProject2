@@ -51,6 +51,7 @@ button {
     border: solid;
     border-color: cyan;
     border-width: 10px;
+    height: 210px;
   }
   .BtnAreaTwo {
     margin-top: 10px;
@@ -79,6 +80,7 @@ button {
     border-color: red;
     border-width: 10px;
     height: 5000px;
+    height: 620px;
   }
   .BtnAreaTwo {
     margin-top: 10px;
@@ -106,6 +108,7 @@ button {
     border: solid;
     border-color: yellow;
     border-width: 10px;
+    height: 470px;
   }
   .BtnAreaTwo {
     margin-top: 10px;
@@ -133,6 +136,7 @@ button {
     border: solid;
     border-color: pink;
     border-width: 10px;
+    height: 356px;
   }
   .BtnAreaTwo {
     margin-top: 10px;
