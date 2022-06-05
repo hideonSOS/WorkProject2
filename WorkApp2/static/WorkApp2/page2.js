@@ -10,6 +10,7 @@ let GetBarWidth=()=>{
     }
     return wi
 }
+
 wiwi = GetBarWidth();
 const DrawGraph2=(dataon,datalist,type)=> {
     dict={
@@ -39,7 +40,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
             scales:{
                 xAxes:[{
                     // barPercentage: 10,     
-                    barThickness:GetBarWidth(), 
+                    barThickness:wiwi['barwidth'], 
                     // categoryPercentage: 10,
                     scaleLabel:{
                         fontColor:'yellow',
@@ -51,18 +52,18 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     ticks: {
                         autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: wiwi['fontsize'],
+                        fontSize: 10,
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
                 {
                     // barPercentage: 1,     
-                    barThickness:GetBarWidth(), 
+                    barThickness:wiwi['barwidth'], 
                     // categoryPercentage: 1,
                     scaleLabel: {                  // 軸ラベル               // 表示の有無
                         fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontSize: wiwi['fontsize'],                   // フォントサイズ
+                        fontSize: wiwi['fontsize']                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
                         color: "grey", // 補助線の色
@@ -71,7 +72,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     },
                     ticks: {                       // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize:wiwi['fontsize'],
+                        fontSize: wiwi['fontsize'],
                                           // フォントサイズ
                     }
                 }
