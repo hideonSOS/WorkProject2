@@ -1,12 +1,12 @@
 let GetBarWidth=()=>{
     if (document.documentElement.clientWidth>1500){
-        wi = {barwidth:15,fontsize:10}
+        wi = {barwidth:15,fontsize:18}
     }
     else if (document.documentElement.clientWidth>1000){
-        wi = {barwidth:8,fontsize:7}
+        wi = {barwidth:8,fontsize:12}
     }
     else if (document.documentElement.clientWidth<999){
-        wi = {barwidth:5,fontsize:4}
+        wi = {barwidth:5,fontsize:8}
     }
     return wi
 }
