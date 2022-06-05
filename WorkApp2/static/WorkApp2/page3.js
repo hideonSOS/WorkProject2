@@ -1,15 +1,16 @@
 let GetBarWidth=()=>{
     if (document.documentElement.clientWidth>1500){
-        wi = 15
+        wi = {barwidth:15,fontsize:10}
     }
     else if (document.documentElement.clientWidth>1000){
-        wi = 8
+        wi = {barwidth:8,fontsize:7}
     }
     else if (document.documentElement.clientWidth<999){
-        wi = 5
+        wi = {barwidth:5,fontsize:4}
     }
     return wi
 }
+let wiwi = GetBarWidth();
 // alert(GetWidth())
 
 const DrawGraph=(dataon,datalist)=> {
@@ -42,7 +43,7 @@ const DrawGraph=(dataon,datalist)=> {
                 xAxes:[{
                     // barPercentage: 0.8,           //棒グラフ幅
                     // categoryPercentage: 0.5,      //棒グラフ幅
-                    barThickness:GetBarWidth(), 
+                    barThickness:wiwi['barwidth'], 
                     scaleLabel:{
                         fontColor:'yellow',
                     },
@@ -53,7 +54,7 @@ const DrawGraph=(dataon,datalist)=> {
                     ticks: {
                         autoSkip:false,                     
                         fontColor: "yellow",    
-                        fontSize:8,
+                        fontSize:wiwi['fontsize'],
                     }   
                 }],
                 yAxes: [                     
@@ -70,7 +71,7 @@ const DrawGraph=(dataon,datalist)=> {
                         // max:12,  
                                   // 軸間隔
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 18              // フォントサイズ
+                        fontSize:wiwi['fontsize'],             // フォントサイズ
                     }
                 }
             ]
