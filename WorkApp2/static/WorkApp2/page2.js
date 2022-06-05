@@ -1,15 +1,16 @@
 let GetBarWidth=()=>{
     if (document.documentElement.clientWidth>1500){
-        wi = 15
+        wi = {barwidth:15,fontsize:18}
     }
     else if (document.documentElement.clientWidth>1000){
-        wi = 8
+        wi = {barwidth:8,fontsize:12}
     }
     else if (document.documentElement.clientWidth<999){
-        wi = 5
+        wi = {barwidth:5,fontsize:7}
     }
     return wi
 }
+wiwi = GetBarWidth();
 const DrawGraph2=(dataon,datalist,type)=> {
     dict={
         type: type,
@@ -50,7 +51,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     ticks: {
                         autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 10,
+                        fontSize: wiwi['fontsize'],
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
@@ -61,7 +62,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     scaleLabel: {                  // 軸ラベル               // 表示の有無
                         fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontSize: 10                   // フォントサイズ
+                        fontSize: wiwi['fontsize'],                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
                         color: "grey", // 補助線の色
@@ -70,7 +71,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     },
                     ticks: {                       // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 10,
+                        fontSize:wiwi['fontsize'],
                                           // フォントサイズ
                     }
                 }
