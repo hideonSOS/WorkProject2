@@ -6,7 +6,7 @@ let GetBarWidth=()=>{
         wi = {barwidth:8,fontsize:12}
     }
     else if (document.documentElement.clientWidth<999){
-        wi = {barwidth:5,fontsize:8}
+        wi = {barwidth:5,fontsize:6}
     }
     return wi
 }
