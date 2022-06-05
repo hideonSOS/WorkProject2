@@ -52,7 +52,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     ticks: {
                         autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 10,
+                        fontSize: wiwi['fontsize'],
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
