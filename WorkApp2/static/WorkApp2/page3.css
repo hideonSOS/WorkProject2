@@ -2,23 +2,20 @@
   .AreaOne {
     border: solid;
     border-color: white;
-    border-width: 10px;
-    height: 880px;
+    border-width: 5px;
+    height: 1050px;
     overflow: hidden;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: white;
-    border-width: 10px;
-    height: 880px;
+    border-width: 5px;
+    height: 1050px;
   }
   #bar {
     margin: 0px auto 0px auto;
     width: 70%;
-    border: solid;
-    border-color: red;
-    border-width: 1px;
     color: white;
     padding: 5px;
   }
@@ -26,7 +23,7 @@
     margin-top: 10px;
     border: solid;
     border-color: white;
-    border-width: 10px;
+    border-width: 5px;
     height: 50px;
   }
   button {
@@ -44,20 +41,20 @@
     height: 720px;
     border: solid;
     border-color: cyan;
-    border-width: 10px;
+    border-width: 5px;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: cyan;
-    border-width: 10px;
+    border-width: 5px;
     height: 720px;
   }
   .BtnArea {
     margin-top: 10px;
     border: solid;
     border-color: cyan;
-    border-width: 10px;
+    border-width: 5px;
     height: 50px;
   }
   button {
@@ -75,20 +72,20 @@
     height: 620px;
     border: solid;
     border-color: red;
-    border-width: 10px;
+    border-width: 5px;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: red;
-    border-width: 10px;
+    border-width: 5px;
     height: 620px;
   }
   .BtnArea {
     margin-top: 10px;
     border: solid;
     border-color: red;
-    border-width: 10px;
+    border-width: 5px;
     height: 50px;
   }
   button {
@@ -106,20 +103,20 @@
     height: 470px;
     border: solid;
     border-color: yellow;
-    border-width: 10px;
+    border-width: 5px;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: yellow;
-    border-width: 10px;
+    border-width: 5px;
     height: 470px;
   }
   .BtnArea {
     margin-top: 10px;
     border: solid;
     border-color: yellow;
-    border-width: 10px;
+    border-width: 5px;
     height: 100px;
   }
   button {
@@ -137,20 +134,20 @@
     height: 356px;
     border: solid;
     border-color: pink;
-    border-width: 10px;
+    border-width: 5px;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: pink;
-    border-width: 10px;
+    border-width: 5px;
     height: 356px;
   }
   .BtnArea {
     margin-top: 10px;
     border: solid;
     border-color: pink;
-    border-width: 10px;
+    border-width: 5px;
     height: 100px;
   }
   button {
@@ -168,20 +165,20 @@
     height: 210px;
     border: solid;
     border-color: lightgreen;
-    border-width: 10px;
+    border-width: 5px;
   }
   .AreaTwo {
     margin-top: 10px;
     border: solid;
     border-color: lightgreen;
-    border-width: 10px;
+    border-width: 5px;
     height: 210px;
   }
   .BtnArea {
     margin-top: 10px;
     border: solid;
     border-color: lightgreen;
-    border-width: 10px;
+    border-width: 5px;
     height: 150px;
   }
   button {

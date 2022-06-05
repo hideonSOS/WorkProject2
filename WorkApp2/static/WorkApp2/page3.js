@@ -1,3 +1,17 @@
+let GetBarWidth=()=>{
+    if (document.documentElement.clientWidth>1500){
+        wi = 15
+    }
+    else if (document.documentElement.clientWidth>1000){
+        wi = 8
+    }
+    else if (document.documentElement.clientWidth<999){
+        wi = 5
+    }
+    return wi
+}
+// alert(GetWidth())
+
 const DrawGraph=(dataon,datalist)=> {
     dict={
         type: 'bar',
@@ -27,7 +41,8 @@ const DrawGraph=(dataon,datalist)=> {
             scales:{
                 xAxes:[{
                     // barPercentage: 0.8,           //棒グラフ幅
-                    categoryPercentage: 0.5,      //棒グラフ幅
+                    // categoryPercentage: 0.5,      //棒グラフ幅
+                    barThickness:GetBarWidth(), 
                     scaleLabel:{
                         fontColor:'yellow',
                     },
@@ -78,7 +93,7 @@ const TestDrawGraph=()=> {
         labels: ['January', 'February', 'March', 'April']
     },
     options: {
-
+        maintainAspectRatio:false,
         scales: {
             y: {
                 suggestedMax: 100

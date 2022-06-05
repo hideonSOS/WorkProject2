@@ -1,3 +1,15 @@
+let GetBarWidth=()=>{
+    if (document.documentElement.clientWidth>1500){
+        wi = 15
+    }
+    else if (document.documentElement.clientWidth>1000){
+        wi = 8
+    }
+    else if (document.documentElement.clientWidth<999){
+        wi = 5
+    }
+    return wi
+}
 const DrawGraph2=(dataon,datalist,type)=> {
     dict={
         type: type,
@@ -26,7 +38,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
             scales:{
                 xAxes:[{
                     // barPercentage: 10,     
-                    barThickness:15, 
+                    barThickness:GetBarWidth(), 
                     // categoryPercentage: 10,
                     scaleLabel:{
                         fontColor:'yellow',
@@ -38,18 +50,18 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     ticks: {
                         autoSkip:false,                          // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 15,
+                        fontSize: 10,
                     }   
                 }],
                 yAxes: [                           // Ｙ軸設定
                 {
                     // barPercentage: 1,     
-                    barThickness:10, 
+                    barThickness:GetBarWidth(), 
                     // categoryPercentage: 1,
                     scaleLabel: {                  // 軸ラベル               // 表示の有無
                         fontColor: "yellow",             // 文字の色
                         fontFamily: "sans-serif",
-                        fontSize: 15                   // フォントサイズ
+                        fontSize: 10                   // フォントサイズ
                     },
                     gridLines: {                   // 補助線
                         color: "grey", // 補助線の色
@@ -58,7 +70,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                     },
                     ticks: {                       // 目盛り
                         fontColor: "yellow",             // 目盛りの色
-                        fontSize: 15,
+                        fontSize: 10,
                                           // フォントサイズ
                     }
                 }
@@ -72,7 +84,6 @@ const DrawGraph2=(dataon,datalist,type)=> {
 const TestDrawGraph=()=> {
     dict={
         //下に辞書
-
         type: 'horizontalBar',
             data: {
                 datasets: [{
@@ -138,9 +149,6 @@ const DrawGraph3 = (dataon,datalist)=>{
                 
             })
             
-    
-    
-        
     });
 }
 

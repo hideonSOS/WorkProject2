@@ -1,7 +1,9 @@
+$BorderValue:5px;
+
 $mobileA-color:white;
 $mobileA-max:3000px;
 $mobileA-min:1503px;
-$mobileA-height:880px;
+$mobileA-height:1050px;
 
 $mobileB-color:cyan;
 $mobileB-max:1502px;
@@ -33,7 +35,7 @@ $mobileF-height:210px;
     .AreaOne{
     border:solid;
     border-color:$mobileA-color;
-    border-width:10px;
+    border-width:$BorderValue;
     // width:100%;
     height:$mobileA-height;
     overflow: hidden;
@@ -42,15 +44,13 @@ $mobileF-height:210px;
         margin-top:10px;
         border:solid;
         border-color:$mobileA-color;
-        border-width:10px;
+        border-width:$BorderValue;;
         height:$mobileA-height;
     }
     #bar{
         margin:0px auto 0px auto;
         width:70%;
-        border:solid;
-        border-color:red;
-        border-width:1px;
+
         color:white;
         padding: 5px;
     }
@@ -59,7 +59,7 @@ $mobileF-height:210px;
         margin-top:10px;
         border:solid;
         border-color:$mobileA-color;
-        border-width:10px;
+        border-width:$BorderValue;;
         height:50px;
     }
     
@@ -77,21 +77,21 @@ $mobileF-height:210px;
         height:$mobileB-height;
         border:solid;
         border-color:$mobileB-color;
-        border-width:10px;
+        border-width:$BorderValue;
 
     }
     .AreaTwo{
         margin-top:10px;
         border:solid;
         border-color:$mobileB-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:$mobileB-height;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileB-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:50px;
     }
     
@@ -110,20 +110,20 @@ $mobileF-height:210px;
         height:$mobileC-height;
         border:solid;
         border-color:$mobileC-color;
-        border-width:10px;
+        border-width:$BorderValue;
     }
     .AreaTwo{
         margin-top:10px;
         border:solid;
         border-color:$mobileC-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:$mobileC-height;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileC-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:50px;
     }
     
@@ -141,20 +141,20 @@ $mobileF-height:210px;
         height:$mobileD-height;
         border:solid;
         border-color:$mobileD-color;
-        border-width:10px;
+        border-width:$BorderValue;
     }
     .AreaTwo{
         margin-top:10px;
         border:solid;
         border-color:$mobileD-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:$mobileD-height;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileD-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:100px;
     }
     
@@ -172,20 +172,20 @@ $mobileF-height:210px;
         height:$mobileE-height;
         border:solid;
         border-color:$mobileE-color;
-        border-width:10px;
+        border-width:$BorderValue;
     }
     .AreaTwo{
         margin-top:10px;
         border:solid;
         border-color:$mobileE-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:$mobileE-height;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileE-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:100px;
     }
     
@@ -204,20 +204,20 @@ $mobileF-height:210px;
         height:$mobileF-height;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
+        border-width:$BorderValue;
     }
     .AreaTwo{
         margin-top: 10px;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:$mobileF-height;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:150px;
     }
     button{
