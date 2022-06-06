@@ -1,34 +1,51 @@
-$BorderValue:10px;
+$BorderValue:5px;
 
 $mobileA-color:white;
 $mobileA-max:3000px;
 $mobileA-min:1503px;
 $mobileA-height:350px;
+$childA-size:340px;
+
 $mobileA-height2:1600px;
 
 $mobileB-color:cyan;
 $mobileB-max:1502px;
 $mobileB-min:1280px;
-$mobileB-height:720px;
+$mobileB-height:350px;
+
+$mobileB-height2:1600px;
+$childB-size:340px;
 
 $mobileC-color:red;
 $mobileC-max:1279px;
 $mobileC-min:1000px;
-$mobileC-height:620px;
+$mobileC-height:350px;
+
+$mobileC-height2:1600px;
+$childC-size:340px;
 
 $mobileD-color:yellow;
 $mobileD-max:999px;
 $mobileD-min:780px;
-$mobileD-height:470px;
+$mobileD-height:350px;
+
+$mobileD-height2:1600px;
+$childD-size:340px;
 
 $mobileE-color:pink;
 $mobileE-max:779px;
 $mobileE-min:480px;
-$mobileE-height:356px;
+$mobileE-height:350px;
+
+$mobileE-height2:1600px;
+$childE-size:340px;
 
 $mobileF-color:lightgreen;
-$mobileF-all:480px;
-$mobileF-height:210px;
+$mobileF-all:280px;
+$mobileF-height:350px;
+
+$mobileF-height2:1600px;
+$childF-size:340px;
 
 button{
     background-color: yellow;
@@ -39,7 +56,7 @@ button{
 
 @media all and (min-width:$mobileA-min) and (max-width:$mobileA-max){
     .AreaOne{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;
@@ -47,19 +64,19 @@ button{
         &>:nth-child(1){
             border: solid;
             border-color:red;
-            border-width:10px;
-            height:330px;
-            width:330px;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childA-size;
         }
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;
@@ -67,7 +84,7 @@ button{
     }
 
     .BtnAreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;
@@ -79,23 +96,30 @@ button{
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
-        height:330px;
-        width:330px;
+        height:$mobileB-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:$BorderValue;
+            height:$childB-size;
+            width:$childB-size;
+        }
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
+        height:$mobileB-height2;
     }
     .BtnAreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
@@ -107,25 +131,32 @@ button{
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
-        height:330px;
-        width:330px;
+        height:$mobileC-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:$BorderValue;
+            height:$childC-size;
+            width:$childC-size;
+        }
+
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
-        height:5000px;
+        height:$mobileC-height2;
     }
 
     .BtnAreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
@@ -137,26 +168,33 @@ button{
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
-        height:330px;
-        width:330px;
+        height:$mobileD-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:$BorderValue;
+            height:$childD-size;
+            width:$childD-size;
+        }
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
     }
     .BtnAreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
+        height:$mobileD-height2;
     }
 }
 
@@ -165,24 +203,31 @@ button{
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
-        height:330px;
-        width:330px;
+        height:$mobileE-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:$BorderValue;
+            height:$childE-size;
+            width:$childE-size;
+        }
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
+        height:$mobileE-height2;
     }
 
     .BtnAreaTwo{
-        margin-top:10px;
+        margin-top:$BorderValue;
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
@@ -194,22 +239,28 @@ button{
         height:$mobileF-height;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
-        height:330px;
-        width:330px;
+        border-width:$BorderValue;
+        height:$mobileF-height;
+        &>:nth-child(1){
+            border: solid;
+            border-color:red;
+            border-width:$BorderValue;
+            height:$childF-size;
+            width:$childF-size;
+        }
     }
     .AreaTwo{
         margin-top: 10px;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
-        height:$mobileF-height;
+        border-width:$BorderValue;
+        height:$mobileF-height2;
     }
     .BtnArea{
         margin-top:10px;
         border:solid;
         border-color:$mobileF-color;
-        border-width:10px;
+        border-width:$BorderValue;
         height:150px;
     }
     
