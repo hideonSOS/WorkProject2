@@ -42,7 +42,7 @@ $mobileE-height2:1600px;
 $childE-size:340px;
 
 $mobileF-color:lightgreen;
-$mobileF-all:280px;
+$mobileF-all:480px;
 $mobileF-height:350px;
 
 $mobileF-height2:1600px;
@@ -211,7 +211,6 @@ button{
         height:$mobileE-height;
         &>:nth-child(1){
             border: solid;
-            border-color:red;
             border-width:$BorderValue;
             height:$childE-size;
             width:$childE-size;
@@ -256,7 +255,7 @@ button{
         }
     }
     .AreaTwo{
-        margin-top: $BorderValue;
+        margin-top: $MarginValue;
         border:solid;
         border-color:$mobileF-color;
         border-width:$BorderValue;

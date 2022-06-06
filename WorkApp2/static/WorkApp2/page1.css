@@ -158,7 +158,6 @@ button {
   }
   .AreaOne > :nth-child(1) {
     border: solid;
-    border-color: red;
     border-width: 5px;
     height: 340px;
     width: 340px;
@@ -184,7 +183,7 @@ button {
   }
 }
 
-@media all and (max-width: 280px) {
+@media all and (max-width: 480px) {
   .AreaOne {
     margin-top: 5px;
     height: 350px;
