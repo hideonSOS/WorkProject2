@@ -42,6 +42,7 @@ button {
 
 @media all and (min-width: 1280px) and (max-width: 1502px) {
   .AreaOne {
+    margin-top: 5px;
     border: solid;
     border-color: cyan;
     border-width: 5px;
@@ -77,6 +78,7 @@ button {
 
 @media all and (min-width: 1000px) and (max-width: 1279px) {
   .AreaOne {
+    margin-top: 5px;
     border: solid;
     border-color: red;
     border-width: 5px;
@@ -112,6 +114,7 @@ button {
 
 @media all and (min-width: 780px) and (max-width: 999px) {
   .AreaOne {
+    margin-top: 5px;
     border: solid;
     border-color: yellow;
     border-width: 5px;
@@ -147,6 +150,7 @@ button {
 
 @media all and (min-width: 480px) and (max-width: 779px) {
   .AreaOne {
+    margin-top: 5px;
     border: solid;
     border-color: pink;
     border-width: 5px;
@@ -182,6 +186,7 @@ button {
 
 @media all and (max-width: 280px) {
   .AreaOne {
+    margin-top: 5px;
     height: 350px;
     border: solid;
     border-color: lightgreen;
@@ -190,20 +195,20 @@ button {
   }
   .AreaOne > :nth-child(1) {
     border: solid;
-    border-color: red;
+    border-color: lightgreen;
     border-width: 5px;
     height: 340px;
     width: 340px;
   }
   .AreaTwo {
-    margin-top: 10px;
+    margin-top: 5px;
     border: solid;
     border-color: lightgreen;
     border-width: 5px;
     height: 1600px;
   }
   .BtnArea {
-    margin-top: 10px;
+    margin-top: 5px;
     border: solid;
     border-color: lightgreen;
     border-width: 5px;

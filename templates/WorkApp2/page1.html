@@ -33,20 +33,18 @@
         {% for i in dict.one.name %}
             <p>{{ i }}</p>
         {% endfor %}
-        {% for i in dict.two %}
-            <p>{{ i }}</p>
-        {% endfor %}
-        {{ dict.two }}
+        
     </div>
     <script src="{% static 'WorkApp2/page1_on.js' %}"></script>
     <script>
     
     {% autoescape off %}
         let MotorDict = {{ dict.two }};
+        let MotorDict2 = {{ dict.one }}
     {% endautoescape %}
     
     OutputData('myRadarChart','btn1','inp1');
-    
+    console.log(MotorDict2);
     </script>
     
     <script src="{% static 'WorkApp2/page1.js' %}"></script>

@@ -1,4 +1,5 @@
 $BorderValue:5px;
+$MarginValue:5px;
 
 $mobileA-color:white;
 $mobileA-max:3000px;
@@ -41,7 +42,7 @@ $mobileF-height:210px;
     overflow: hidden;
 }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;;
@@ -56,7 +57,7 @@ $mobileF-height:210px;
     }
 
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;;
@@ -81,14 +82,14 @@ $mobileF-height:210px;
 
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
         height:$mobileB-height;
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileB-color;
         border-width:$BorderValue;
@@ -113,14 +114,14 @@ $mobileF-height:210px;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
         height:$mobileC-height;
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileC-color;
         border-width:$BorderValue;
@@ -144,14 +145,14 @@ $mobileF-height:210px;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
         height:$mobileD-height;
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileD-color;
         border-width:$BorderValue;
@@ -175,14 +176,14 @@ $mobileF-height:210px;
         border-width:$BorderValue;
     }
     .AreaTwo{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
         height:$mobileE-height;
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileE-color;
         border-width:$BorderValue;
@@ -214,7 +215,7 @@ $mobileF-height:210px;
         height:$mobileF-height;
     }
     .BtnArea{
-        margin-top:10px;
+        margin-top:$MarginValue
         border:solid;
         border-color:$mobileF-color;
         border-width:$BorderValue;

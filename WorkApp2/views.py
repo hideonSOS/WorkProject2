@@ -30,6 +30,7 @@ def page1(request):
         
         dict['one'] = MyFunction.Scraper4(target_url,target_tag)
         dict['two'] = MyFunction.Scraper(target_url2,'td')
+        print(dict)
     else:
         target_tag = 'a'
         dict = MyFunction.Scraper4(target_url,target_tag)
