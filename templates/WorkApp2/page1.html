@@ -39,12 +39,25 @@
     <script>
     
     {% autoescape off %}
-        let MotorDict = {{ dict.two }};
-        let MotorDict2 = {{ dict.one }}
+    let MotorDict1 = {{ dict.one }}
+    let MotorDict = {{ dict.two }} 
+    let MotorNo = {{ dict.three }}
     {% endautoescape %}
     
     OutputData('myRadarChart','btn1','inp1');
-    console.log(MotorDict2);
+
+    const test = (target) =>{
+    MotorDict['no'].map((str,i)=>{
+        if (i==target){
+            console.log(str);
+        }
+        })
+    }
+    const testii = SelectOn2(MotorNo);
+    console.log(` >>> ${testii}`);
+
+    
+    test(testii);
     </script>
     
     <script src="{% static 'WorkApp2/page1.js' %}"></script>

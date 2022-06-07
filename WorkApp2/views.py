@@ -26,14 +26,16 @@ def page1(request):
         mno = request.POST.get('input1')
         target_url = 'http://www.boatrace-db.net/stadium/mdetail/pid/12/mno/'+str(mno)+'/'
         target_tag = 'a'
-        target_url2 = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=8'
-        
+        target_url2 = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=9&select=9'
+        # 艇国データ
         dict['one'] = MyFunction.Scraper4(target_url,target_tag)
+        # 住之江公式
         dict['two'] = MyFunction.Scraper(target_url2,'td')
-        print(dict)
+        dict['three']=mno
     else:
         target_tag = 'a'
         dict = MyFunction.Scraper4(target_url,target_tag)
+
     return render(request, 'WorkApp2/page1.html',{'dict':dict})
 
 
