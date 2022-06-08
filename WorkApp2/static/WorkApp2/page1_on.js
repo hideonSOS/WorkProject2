@@ -1,6 +1,6 @@
-function DrawGraph() {
+function DrawGraph(lista) {
         
-    const labelon = ['１着','２着','３着','４着','５着','６着'];
+    const labelon = ['逃げ','まくり','差し','まくり差し','抜き','恵まれ'];
     const linecolor = 'orange';
     const linewidth=2;
     var dict = {
@@ -12,7 +12,7 @@ function DrawGraph() {
                 datasets: [{
                 label: '未入力',
                 //グラフのデータ
-                data:[0,0,0,0,0,0],
+                data:lista,
                 // データライン
                 borderColor: linecolor,
                 borderWidth:linewidth,
@@ -137,6 +137,16 @@ const OutputData = (IDs,BTN,INP)=>{
                 // chart.update();
                 // alert(InputValue)
             })
+
+    });
+}
+const OutputData2 = (IDs,lista)=>{
+    document.addEventListener('DOMContentLoaded', function() {
+    var ctx1 = document.getElementById(IDs).getContext('2d');
+    dict = DrawGraph(lista);
+    var chart = new Chart(ctx1,dict);
+
+
 
     });
 }

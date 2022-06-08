@@ -32,6 +32,7 @@ def page1(request):
         # 住之江公式
         dict['two'] = MyFunction.Scraper(target_url2,'td')
         dict['three']=mno
+        
     else:
         target_tag = 'a'
         dict = MyFunction.Scraper4(target_url,target_tag)

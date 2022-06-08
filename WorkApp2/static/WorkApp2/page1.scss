@@ -1,5 +1,7 @@
 $BorderValue:5px;
 $MarginValue:5px;
+$childW1-size:30%;
+$childW2-size:68%;
 
 $mobileA-color:white;
 $mobileA-max:3000px;
@@ -62,12 +64,28 @@ button{
         border-color:$mobileA-color;
         border-width:$BorderValue;
         height:$mobileA-height;
+        padding: auto;
         &>:nth-child(1){
             border: solid;
             border-color:red;
             border-width:$BorderValue;
             height:$childA-size;
             width:$childA-size;
+            display:inline-block;
+            overflow: hidden;
+            &>:nth-child(1){
+                border:solid;
+                border-color:aqua;
+            }
+        }
+        &>:nth-child(2){
+            border:solid;
+            border-color:yellow;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childW2-size;
+            display:inline-block;
+        
         }
     }
     .BtnArea{
@@ -212,6 +230,7 @@ button{
         &>:nth-child(1){
             border: solid;
             border-width:$BorderValue;
+            border-color:red;
             height:$childE-size;
             width:$childE-size;
         }

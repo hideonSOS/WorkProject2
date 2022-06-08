@@ -24,6 +24,8 @@ def Scraper(url,tag):
     'makuri':[],
     'sashi':[],
     'makurizashi':[],
+    'nuki':[],
+    'luck':[]
     }
 
     for i, elem in enumerate(elems):
@@ -45,7 +47,10 @@ def Scraper(url,tag):
             dict['sashi'].append(elem)
         elif i%17==14 or i==14:
             dict['makurizashi'].append(elem)
-            
+        elif i%17==15 or i==15:
+            dict['nuki'].append(elem)
+        elif i%17==16 or i==16:
+            dict['luck'].append(elem)
     return dict
 
 
@@ -111,9 +116,14 @@ def Scraper4(url,tag):
     for i in elems:
         if 'racer' in str(i):
             # dict['name'].append(str(i))
+            
             lisk[0].append(str(i))
-    for i in lisk[0]:
+    for i in lisk[0][1:]:
         lisk[1].append(re.sub(r'<(.*?)>','',i))
+
     for i in lisk[1]:
+
         dict['name'].append(re.sub(r'   ',' ', i))
+
+    
     return dict

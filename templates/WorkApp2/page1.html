@@ -12,6 +12,9 @@
         <div id="one">
             <canvas id="myRadarChart"></canvas>
         </div>
+        <div class="two">
+            <p style="height:60px; border-color:black; border:solid;"></p>
+        </div>
     </div>
     
     <div class='BtnArea'>
@@ -33,32 +36,46 @@
         {% for i in dict.one.name %}
             <p>{{ i }}</p>
         {% endfor %}
-        
+        <!-- {{ dict }} -->
     </div>
     <script src="{% static 'WorkApp2/page1_on.js' %}"></script>
     <script>
     
     {% autoescape off %}
-    let MotorDict1 = {{ dict.one }}
-    let MotorDict = {{ dict.two }} 
-    let MotorNo = {{ dict.three }}
+        let MotorDict1 = {{ dict.one }}
+        let MotorDict = {{ dict.two }} 
+        let MotorNo = {{ dict.three }}
     {% endautoescape %}
     
-    OutputData('myRadarChart','btn1','inp1');
+    
 
-    const test = (target) =>{
-    MotorDict['no'].map((str,i)=>{
-        if (i==target){
-            console.log(str);
-        }
+    const ReturnDataSet = (target) =>{
+        MotorDict['no'].map((str,i)=>{
+            // DataSet={};
+            if (str.indexOf(target.toString())!=-1){
+                // console.log(MotorDict['no'][i],MotorDict['twoave'][i]);
+                DataSet={
+                    no:MotorDict['no'][i],
+                    twoave:MotorDict['twoave'][i],
+                    oneave:MotorDict['oneave'][i],
+                    rapave:MotorDict['rapave'][i],
+                    rapmax:MotorDict['rapmax'][i],
+                    nige:MotorDict['nige'][i],
+                    makuri:MotorDict['makuri'][i],
+                    sashi:MotorDict['sashi'][i],
+                    makurizashi:MotorDict['makurizashi'][i],
+                    nuki:MotorDict['nuki'][i],
+                    luck:MotorDict['luck'][i],
+                }
+            
+            }
+        
         })
+        return DataSet
     }
-    const testii = SelectOn2(MotorNo);
-    console.log(` >>> ${testii}`);
-
-    
-    test(testii);
+    DataSet = ReturnDataSet(MotorNo)
+    OutputData2('myRadarChart',[DataSet['nige'],DataSet['makuri'],DataSet['sashi'],DataSet['makurizashi'],0,0]);
+  
     </script>
-    
     <script src="{% static 'WorkApp2/page1.js' %}"></script>
 {% endblock %}
