@@ -34,6 +34,8 @@ def page1(request):
         dict['three']=mno
         
     else:
+
+
         target_tag = 'a'
         dict = MyFunction.Scraper4(target_url,target_tag)
 

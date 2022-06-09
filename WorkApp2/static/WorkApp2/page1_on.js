@@ -1,4 +1,4 @@
-function DrawGraph(lista) {
+function DrawGraph(MotorNo,lista) {
         
     const labelon = ['逃げ','まくり','差し','まくり差し','抜き','恵まれ'];
     const linecolor = 'orange';
@@ -10,10 +10,10 @@ function DrawGraph(lista) {
             　data: {
                 labels: labelon,
                 datasets: [{
-                label: '未入力',
-                //グラフのデータ
+                label: 'モーター >>> '+ MotorNo +'号機',
                 data:lista,
-                // データライン
+                fontColor:'white',
+                backgroundColor: "rgba(255,0,0,0.5)",
                 borderColor: linecolor,
                 borderWidth:linewidth,
                 padding:1,
@@ -27,79 +27,19 @@ function DrawGraph(lista) {
             
                 scales: {
                     r: {
-                    //グラフの最小値・最大値
-                    min: 0,
-                    // max: 100,
-                    // max:20,
-                    //背景色
-                    backgroundColor:'rgba(10,10,250,0.5)',
-                    grid: {color: 'cyan'},
-                    //アングルライン
-                    angleLines: {color: 'cyan'},
-                    //各項目のラベル
-                    pointLabels: {
-                        color:'white',
-                    },
-
-                    fullsize:false,
-                    },
-                    // xAxis:{fontSize:10}
+                        min: 0,
+                        backgroundColor:'rgba(10,10,250,0.5)',
+                        grid: {color: 'cyan'},
+                        angleLines: {color: 'cyan'},
+                        pointLabels: {color:'white'},
+                        fullsize:false,
+                        },
                 },
             }, 
         }
     return dict;
 };
 
-const DrawGraph2=(datas)=> {
-        
-    const labelon = ['１着','２着','３着','４着','５着','６着'];
-    const linecolor = 'orange';
-    const linewidth=2;
-    var dict = {
-        //グラフの種類
-            type: 'radar',
-            //データの設定
-            data: {
-                labels: labelon,
-                datasets: [{
-                label: datas['MotorNo'],
-                //グラフのデータ
-                data:[datas['One'],datas['Two'],datas['Three'],datas['Four'],datas['Five'],datas['Six']],
-                // データライン
-                borderColor: linecolor,
-                borderWidth:linewidth,
-                padding:1,
-                boxHeight:100,
-                innerWidth:50,
-                }],
-            },
-            //オプションの設定
-            options: {
-            
-                scales: {
-                    r: {
-                    //グラフの最小値・最大値
-                    min: 0,
-                    // max: 100,
-                    // max:20,
-                    //背景色
-                    backgroundColor:'rgba(10,10,250,0.5)',
-                    grid: {color: 'cyan'},
-                    //アングルライン
-                    angleLines: {color: 'cyan'},
-                    //各項目のラベル
-                    pointLabels: {
-                        color:'white',
-                    },
-
-                    fullsize:false,
-                    },
-                    // xAxis:{fontSize:10}
-                },
-            }, 
-        }
-    return dict;
-};
 
 
 const SelectOn=(No)=>{
@@ -140,13 +80,11 @@ const OutputData = (IDs,BTN,INP)=>{
 
     });
 }
-const OutputData2 = (IDs,lista)=>{
+const OutputData2 = (IDs,lista,MotorOn)=>{
     document.addEventListener('DOMContentLoaded', function() {
     var ctx1 = document.getElementById(IDs).getContext('2d');
-    dict = DrawGraph(lista);
+    dict = DrawGraph(MotorOn,lista);
     var chart = new Chart(ctx1,dict);
-
-
 
     });
 }
@@ -165,3 +103,14 @@ const SelectOn2=(No)=>{
     }
     else if (No>84){alert(No+'号機はありません。');}
 }
+
+
+const App = {
+    data(){
+        return{
+            twoave:'testvalue2'
+        }
+    },
+}
+app = Vue.createApp(App)
+app.mount('#app2')

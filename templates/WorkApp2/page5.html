@@ -1,7 +1,19 @@
 {% extends 'WorkApp2/template.html' %}
 {% load static %}
 {% block header %}
+
+<script src="https://unpkg.com/vue@next"></script>
+
 {% endblock %}
 {% block body %}
-    <p>page5 contents</p>
+    <div>vue-test-page</div>
+    {% verbatim %}
+    <div id="app1">
+        <p>{{ message }}</p>
+        <button v-on:click="increment">push</button>
+    </div>
+    {% endverbatim %}
+    
+    <script src="{% static 'WorkApp2/page5.js' %}"></script>
+    
 {% endblock %}

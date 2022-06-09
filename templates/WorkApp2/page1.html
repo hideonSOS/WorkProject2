@@ -3,7 +3,7 @@
 {% block header %}
     <link rel="stylesheet" href="{% static 'WorkApp2/page1.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
-    
+    <script src="https://unpkg.com/vue@next"></script>
 {% endblock %}  
 
 {% block body %}
@@ -12,8 +12,12 @@
         <div id="one">
             <canvas id="myRadarChart"></canvas>
         </div>
-        <div class="two">
-            <p style="height:60px; border-color:black; border:solid;"></p>
+        <div class="two" style="display:fixed; position:absolute;">
+            <p>{{ dict.three }} 号機</p>
+            {% verbatim %}
+            <p id="app1">{{ oneave }}</p>
+            <p id="app2">{{ twoave }}</p>
+            {% endverbatim %}
         </div>
     </div>
     
@@ -74,8 +78,9 @@
         return DataSet
     }
     DataSet = ReturnDataSet(MotorNo)
-    OutputData2('myRadarChart',[DataSet['nige'],DataSet['makuri'],DataSet['sashi'],DataSet['makurizashi'],0,0]);
-  
+    OutputData2('myRadarChart',[DataSet['nige'],DataSet['makuri'],DataSet['sashi'],DataSet['makurizashi'],0,0],MotorNo);
+
     </script>
+
     <script src="{% static 'WorkApp2/page1.js' %}"></script>
 {% endblock %}

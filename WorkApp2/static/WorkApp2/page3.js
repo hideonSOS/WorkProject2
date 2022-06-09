@@ -120,7 +120,8 @@ const ReturnColor = (datavalue,borderscore)=>{
 }
 
 
-const DrawGraphonLoad = (dataon,datalist)=>{
+
+const DrawGraphonLoad = (dataon,datalist,GCL)=>{
     document.addEventListener('DOMContentLoaded', function() {
 
     var ctx1 = document.getElementById('bar').getContext('2d');
@@ -134,7 +135,7 @@ const DrawGraphonLoad = (dataon,datalist)=>{
                 chart.data.datasets[0].label= "総 得 点 >>> ";
                 chart.data.datasets[0].data = dataon['point'];
                 chart.data.datasets[0].borderColor ='orange';
-                chart.data.datasets[0].backgroundColor = 'rgba(255,0,255,0.3)';
+                chart.data.datasets[0].backgroundColor = GCL;
                 chart.options.title.text='総 得 点 ';
                 chart.update();
                 
@@ -144,7 +145,7 @@ const DrawGraphonLoad = (dataon,datalist)=>{
                 chart.data.datasets[0].label= "総 得 率 >>> ";
                 chart.data.datasets[0].data = dataon['average'];
                 chart.data.datasets[0].borderColor ='lightgreen';
-                chart.data.datasets[0].backgroundColor ='cyan';
+                chart.data.datasets[0].backgroundColor =GCL;
                 chart.options.title.text='得 点 率'
                 chart.update();
                 
@@ -162,7 +163,7 @@ const DrawGraphonLoad = (dataon,datalist)=>{
             chart.data.datasets[0].label= "１ 走 必 要 得 点 >>> ";
             chart.data.datasets[0].data = lion;
             chart.data.datasets[0].borderColor ='lightgreen';
-            chart.data.datasets[0].backgroundColor ='orange';
+            chart.data.datasets[0].backgroundColor =GCL;
             chart.options.title.text='必要得点'
             chart.update();
 
@@ -181,7 +182,7 @@ const DrawGraphonLoad = (dataon,datalist)=>{
             chart.data.datasets[0].label= "２ 走 必 要 得 点 >>> ";
             chart.data.datasets[0].data = lion;
             chart.data.datasets[0].borderColor ='lightgreen';
-            chart.data.datasets[0].backgroundColor ='lightgreen';
+            chart.data.datasets[0].backgroundColor =GCL;
             chart.options.title.text='必要得点'
             chart.update();
 
@@ -192,3 +193,16 @@ const DrawGraphonLoad = (dataon,datalist)=>{
     });
 }
 
+const GetColorList =(object,color1,color2)=>{
+        let GCL = object.map((elem)=>{
+            FuncInList=[]
+            if (Number(elem.replace('位','')) <= 18){
+                FuncInList.push(color1);
+            }
+            else{
+                FuncInList.push(color2);
+            }
+            return FuncInList
+        })
+        return GCL
+    }

@@ -38,7 +38,8 @@
         let RankDictHtml = {{ RankDict }};
     {% endautoescape %}
     
-    DrawGraphonLoad(RankDictHtml,'average')
+    const GCL = GetColorList(RankDictHtml['ranking'],'cyan','orange')
+    DrawGraphonLoad(RankDictHtml,'average',GCL)
     
     var ctx2 = document.getElementById('bartwo').getContext('2d');
     var dict = TestDrawGraph();
@@ -48,6 +49,10 @@
         const testvalue = document.getElementById('testid').value;
         alert(testvalue);
     });
+
+
+    // console.log(GetColorList(RankDictHtml['ranking']))
+    
 
     </script>
 {% endblock %}
