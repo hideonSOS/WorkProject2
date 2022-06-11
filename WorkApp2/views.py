@@ -64,3 +64,9 @@ def page4(request):
 
 def page5(request):
     return render(request, 'WorkApp2/page5.html')
+
+def page6(request):
+    return render(request, 'WorkApp2/page6.html')
+
+def page7(request):
+    return render(request, 'WorkApp2/page7.html')

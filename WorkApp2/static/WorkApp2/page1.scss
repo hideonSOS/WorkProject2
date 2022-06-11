@@ -64,6 +64,7 @@ button{
         border-color:$mobileA-color;
         border-width:$BorderValue;
         height:$mobileA-height;
+        width:99%;
         padding: auto;
         &>:nth-child(1){
             border: solid;
@@ -118,6 +119,7 @@ button{
         border-color:$mobileB-color;
         border-width:$BorderValue;
         height:$mobileB-height;
+        width:99%;
         &>:nth-child(1){
             border: solid;
             border-color:red;
@@ -133,6 +135,7 @@ button{
             height:$childA-size;
             width:$childW2-size;
             display:inline-block;
+        
         
         }
     }
@@ -177,7 +180,7 @@ button{
             border-color:yellow;
             border-width:$BorderValue;
             height:$childA-size;
-            width:$childW2-size;
+            width:$mobileC-min*0.6;
             display:inline-block;
         
         }
@@ -224,7 +227,7 @@ button{
             border-color:yellow;
             border-width:$BorderValue;
             height:$childA-size;
-            width:$childW2-size;
+            width:$mobileD-min*0.4;
             display:inline-block;
         
         }

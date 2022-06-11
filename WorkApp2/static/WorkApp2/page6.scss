@@ -1,0 +1,47 @@
+$BorderValue:5px;
+$MarginValue:5px;
+
+$mobileA-color:white;
+$mobileA-max:3000px;
+$mobileA-min:1503px;
+$mobileA-height:1000px;
+$mobileA-height2:1600px;
+
+$mobileB-color:cyan;
+$mobileB-max:1502px;
+$mobileB-min:1280px;
+$mobileB-height:720px;
+$mobileB-height2:1400px;
+
+$mobileC-color:red;
+$mobileC-max:1279px;
+$mobileC-min:1000px;
+$mobileC-height:620px;
+$mobileC-height2:1200px;
+
+$mobileD-color:yellow;
+$mobileD-max:999px;
+$mobileD-min:780px;
+$mobileD-height:470px;
+$mobileD-height2:1000px;
+
+$mobileE-color:pink;
+$mobileE-max:779px;
+$mobileE-min:480px;
+$mobileE-height:356px;
+$mobileE-height2:700px;
+
+$mobileF-color:lightgreen;
+$mobileF-all:480px;
+$mobileF-height:210px;
+$mobileF-height2:500px;
+
+
+@media all and(max-width:$mobileA-max) and(min-width:$mobileA-min){
+    .AreaOne{
+        border:solid;
+        border-color:$BorderValue;
+        margin-top:$MarginValue;
+    }
+    
+}

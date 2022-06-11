@@ -11,6 +11,7 @@ button {
     border-color: white;
     border-width: 5px;
     height: 350px;
+    width: 99%;
     padding: auto;
   }
   .AreaOne > :nth-child(1) {
@@ -63,6 +64,7 @@ button {
     border-color: cyan;
     border-width: 5px;
     height: 350px;
+    width: 99%;
   }
   .AreaOne > :nth-child(1) {
     border: solid;
@@ -122,7 +124,7 @@ button {
     border-color: yellow;
     border-width: 5px;
     height: 340px;
-    width: 68%;
+    width: 600px;
     display: inline-block;
   }
   .BtnArea {
@@ -167,7 +169,7 @@ button {
     border-color: yellow;
     border-width: 5px;
     height: 340px;
-    width: 68%;
+    width: 312px;
     display: inline-block;
   }
   .BtnArea {

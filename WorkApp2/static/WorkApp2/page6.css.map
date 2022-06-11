@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuCA,MAAM,CAAC,GAAG,MAAM,SAAS,EAAE,MAAM,OAAO,SAAS,EAAE,MAAM;EACrD,AAAA,QAAQ,CAAA;IACJ,MAAM,EAAC,KAAK;IACZ,YAAY,EA1CP,GAAG;IA2CR,UAAU,EA1CL,GAAG;GA2CX",
+    "sources": [
+        "page6.scss"
+    ],
+    "names": [],
+    "file": "page6.css"
+}

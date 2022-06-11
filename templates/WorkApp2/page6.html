@@ -1,0 +1,18 @@
+{% extends 'WorkApp2/template.html' %}
+
+{% block header %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'WorkApp2/page6.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="AreaOne">
+        <div class="one">
+            <canvas id="bar"></canvas>
+        </div>
+        <div class="two">
+
+        </div>
+    </div>
+{% endblock %}
