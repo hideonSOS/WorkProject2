@@ -18,6 +18,10 @@ def Scraper(url,tag):
     'no':[],
     'twoave':[],
     'oneave':[],
+    'one':[],
+    'two':[],
+    'three':[],
+    'runcount':[],
     'rapave':[],
     'rapmax':[],
     'nige':[],
@@ -35,6 +39,14 @@ def Scraper(url,tag):
             dict['twoave'].append(elem)
         elif i%17==2 or i==2:
             dict['oneave'].append(elem)
+        elif i%17==3 or i==3:
+            dict['one'].append(elem)
+        elif i%17==4 or i==4:
+            dict['two'].append(elem)
+        elif i%17==5 or i==5:
+            dict['three'].append(elem)
+        elif i%17==6 or i==6:
+            dict['runcount'].append(elem)
         elif i%17==9 or i==9:
             dict['rapave'].append(elem)
         elif i%17==10 or i==10:
@@ -107,23 +119,27 @@ def Scraper4(url,tag):
     headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36'}
     html = requests.get(url,headers=headers)
     soup = BeautifulSoup(html.content, 'html.parser')
-    lisk = [[],[]]
+    haco=[]
     dict={
+    'toban':[],
     'name':[],
+    'rank':[],
+    'age':[],
+    'total':[]
     }
     elems = soup.find_all(tag)
+    for i in elems[7:-7]:
+        haco.append(i.text)
+    for i,elem in enumerate(haco):
+        if i==1 or i%5==1:
+            dict['toban'].append(elem)
+        elif i==2 or i%5==2:
+            dict['name'].append(re.sub(r'   ',' ', elem))
+        elif i==3 or i%5==3:
+            dict['rank'].append(re.sub('/','',elem))
+        elif i==4 or i%5==4:
+            dict['age'].append(re.sub('/','',elem))
+    for i in range(len(dict['toban'])):
+        dict['total'].append(dict['toban'][i]+' ' + dict['name'][i]+' '+dict['rank'][i]+' '+dict['age'][i])
 
-    for i in elems:
-        if 'racer' in str(i):
-            # dict['name'].append(str(i))
-            
-            lisk[0].append(str(i))
-    for i in lisk[0][1:]:
-        lisk[1].append(re.sub(r'<(.*?)>','',i))
-
-    for i in lisk[1]:
-
-        dict['name'].append(re.sub(r'   ',' ', i))
-
-    
     return dict

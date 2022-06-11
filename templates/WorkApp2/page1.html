@@ -3,6 +3,9 @@
 {% block header %}
     <link rel="stylesheet" href="{% static 'WorkApp2/page1.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <script src="https://unpkg.com/vue@next"></script>
 {% endblock %}  
 
@@ -37,7 +40,7 @@
         </div>
     </div>
     <div class="AreaTwo">
-        {% for i in dict.one.name %}
+        {% for i in dict.one.total %}
             <p>{{ i }}</p>
         {% endfor %}
         <!-- {{ dict }} -->
@@ -62,6 +65,9 @@
                     no:MotorDict['no'][i],
                     twoave:MotorDict['twoave'][i],
                     oneave:MotorDict['oneave'][i],
+                    one:MotorDict['one'][i],
+                    two:MotorDict['two'][i],
+                    three:MotorDict['three'][i],
                     rapave:MotorDict['rapave'][i],
                     rapmax:MotorDict['rapmax'][i],
                     nige:MotorDict['nige'][i],
@@ -77,8 +83,10 @@
         })
         return DataSet
     }
+
     DataSet = ReturnDataSet(MotorNo)
-    OutputData2('myRadarChart',[DataSet['nige'],DataSet['makuri'],DataSet['sashi'],DataSet['makurizashi'],0,0],MotorNo);
+    console.log(DataSet)
+    OutputData2('myRadarChart',[DataSet['one'],DataSet['two'],DataSet['three']],MotorNo);
 
     </script>
 

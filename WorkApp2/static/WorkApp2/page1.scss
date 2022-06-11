@@ -4,7 +4,7 @@ $childW1-size:30%;
 $childW2-size:68%;
 
 $mobileA-color:white;
-$mobileA-max:3000px;
+$mobileA-max:5000px;
 $mobileA-min:1503px;
 $mobileA-height:350px;
 $childA-size:340px;
@@ -76,6 +76,7 @@ button{
             &>:nth-child(1){
                 border:solid;
                 border-color:aqua;
+                padding:3px;
             }
         }
         &>:nth-child(2){
@@ -123,6 +124,16 @@ button{
             border-width:$BorderValue;
             height:$childB-size;
             width:$childB-size;
+            display:inline-block;
+        }
+        &>:nth-child(2){
+            border:solid;
+            border-color:yellow;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childW2-size;
+            display:inline-block;
+        
         }
     }
     .BtnArea{
@@ -159,8 +170,17 @@ button{
             border-width:$BorderValue;
             height:$childC-size;
             width:$childC-size;
+            display:inline-block;
         }
-
+        &>:nth-child(2){
+            border:solid;
+            border-color:yellow;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childW2-size;
+            display:inline-block;
+        
+        }
     }
     .BtnArea{
         margin-top:$MarginValue;
@@ -197,6 +217,16 @@ button{
             border-width:$BorderValue;
             height:$childD-size;
             width:$childD-size;
+            display:inline-block;
+        }
+        &>:nth-child(2){
+            border:solid;
+            border-color:yellow;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childW2-size;
+            display:inline-block;
+        
         }
     }
     .BtnArea{
@@ -233,6 +263,16 @@ button{
             border-color:red;
             height:$childE-size;
             width:$childE-size;
+            display:inline-block;
+        }
+        &>:nth-child(2){
+            border:solid;
+            border-color:yellow;
+            border-width:$BorderValue;
+            height:$childA-size;
+            width:$childW2-size;
+            display:inline-block;
+        
         }
     }
     .BtnArea{

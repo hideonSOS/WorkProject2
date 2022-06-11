@@ -1,6 +1,6 @@
 function DrawGraph(MotorNo,lista) {
         
-    const labelon = ['逃げ','まくり','差し','まくり差し','抜き','恵まれ'];
+    const labelon = ['１着','２着','３着'];
     const linecolor = 'orange';
     const linewidth=2;
     var dict = {
@@ -10,32 +10,55 @@ function DrawGraph(MotorNo,lista) {
             　data: {
                 labels: labelon,
                 datasets: [{
-                label: 'モーター >>> '+ MotorNo +'号機',
-                data:lista,
-                fontColor:'white',
-                backgroundColor: "rgba(255,0,0,0.5)",
-                borderColor: linecolor,
-                borderWidth:linewidth,
-                padding:1,
-                boxHeight:100,
-                innerWidth:50,
+                    label: 'モーター >>> '+ MotorNo +'号機',
+                    data:lista,
+                    fontColor:'white',
+                    backgroundColor: "rgba(255,0,0,0.5)",
+                    borderColor: linecolor,
+                    borderWidth:linewidth,
+                    padding:1,
 
                 }],
             },
             //オプションの設定
             options: {
-            
-                scales: {
-                    r: {
-                        min: 0,
-                        backgroundColor:'rgba(10,10,250,0.5)',
-                        grid: {color: 'cyan'},
-                        angleLines: {color: 'cyan'},
-                        pointLabels: {color:'white'},
-                        fullsize:false,
-                        },
+                plugins:{
+                    legend:{
+                        display:true,
+                        labels:{
+                            color:'white',
+                            font:{
+                                size:18,}
+                        }
+                    }
                 },
-            }, 
+                // maintainAspectRatio:false,
+                scales: {
+                        r: {
+                    min: 0,
+                    max: 25,
+                        ticks:{
+                            stepSize:5,
+                            font:{
+                                color:'white',
+                            }
+                        },
+                        backgroundColor: 'blue',
+                        grid: {
+                          color: 'cyan',
+                        },
+                        angleLines: {
+                          color: 'cyan',
+                        },
+                        pointLabels: {
+                          color: 'yellow',
+                          backdropColor: 'blue',
+                          backdropPadding: 5,
+                          padding: 20,
+                        },
+                    },
+                },  
+            }
         }
     return dict;
 };

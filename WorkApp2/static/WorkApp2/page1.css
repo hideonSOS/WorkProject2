@@ -4,7 +4,7 @@ button {
   font-family: Arial;
 }
 
-@media all and (min-width: 1503px) and (max-width: 3000px) {
+@media all and (min-width: 1503px) and (max-width: 5000px) {
   .AreaOne {
     margin-top: 5px;
     border: solid;
@@ -25,6 +25,7 @@ button {
   .AreaOne > :nth-child(1) > :nth-child(1) {
     border: solid;
     border-color: aqua;
+    padding: 3px;
   }
   .AreaOne > :nth-child(2) {
     border: solid;
@@ -69,6 +70,15 @@ button {
     border-width: 5px;
     height: 340px;
     width: 340px;
+    display: inline-block;
+  }
+  .AreaOne > :nth-child(2) {
+    border: solid;
+    border-color: yellow;
+    border-width: 5px;
+    height: 340px;
+    width: 68%;
+    display: inline-block;
   }
   .BtnArea {
     margin-top: 5px;
@@ -105,6 +115,15 @@ button {
     border-width: 5px;
     height: 340px;
     width: 340px;
+    display: inline-block;
+  }
+  .AreaOne > :nth-child(2) {
+    border: solid;
+    border-color: yellow;
+    border-width: 5px;
+    height: 340px;
+    width: 68%;
+    display: inline-block;
   }
   .BtnArea {
     margin-top: 5px;
@@ -141,6 +160,15 @@ button {
     border-width: 5px;
     height: 340px;
     width: 340px;
+    display: inline-block;
+  }
+  .AreaOne > :nth-child(2) {
+    border: solid;
+    border-color: yellow;
+    border-width: 5px;
+    height: 340px;
+    width: 68%;
+    display: inline-block;
   }
   .BtnArea {
     margin-top: 5px;
@@ -177,6 +205,15 @@ button {
     border-color: red;
     height: 340px;
     width: 340px;
+    display: inline-block;
+  }
+  .AreaOne > :nth-child(2) {
+    border: solid;
+    border-color: yellow;
+    border-width: 5px;
+    height: 340px;
+    width: 68%;
+    display: inline-block;
   }
   .BtnArea {
     margin-top: 5px;

@@ -25,7 +25,7 @@ def page1(request):
     if request.method=='POST':
         mno = request.POST.get('input1')
         target_url = 'http://www.boatrace-db.net/stadium/mdetail/pid/12/mno/'+str(mno)+'/'
-        target_tag = 'a'
+        target_tag = 'p'
         target_url2 = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=9&select=9'
         # 艇国データ
         dict['one'] = MyFunction.Scraper4(target_url,target_tag)
