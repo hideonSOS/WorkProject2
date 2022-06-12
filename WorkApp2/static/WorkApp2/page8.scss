@@ -41,6 +41,8 @@ $mobileF-height:210px;
 $mobileF-height2:500px;
 
 $heightone:150px;
+$heighttwo:300px;
+$heightthree:450px;
 $spansize:130px;
 
 @media all and (max-width:$mobileA-max) and (min-width:$mobileA-min){
@@ -139,7 +141,7 @@ $spansize:130px;
             border:solid;
             border-color:cyan;
             border-width:$BorderValue;
-            height:$heightone;
+            height:$heighttwo;
             position:relative;
             text-align: center;
         
@@ -180,7 +182,7 @@ $spansize:130px;
             border:solid;
             border-color:cyan;
             border-width:$BorderValue;
-            height:$heightone;
+            height:$heightthree;
             position:relative;
             text-align: center;
         
@@ -221,7 +223,7 @@ $spansize:130px;
             border:solid;
             border-color:cyan;
             border-width:$BorderValue;
-            height:$heightone;
+            height:$heightthree;
             position:relative;
             text-align: center;
         
