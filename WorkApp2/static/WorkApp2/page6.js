@@ -36,7 +36,7 @@ const DrawGraph2=(dataon,datalist,type)=> {
                 display: true,                 //表示設定
                 fontSize: 14,    
                 fontColor:'yellow',              //フォントサイズ
-                text: ' < ボートレース住之江 モーター２連対率 一覧 > ' ,               //ラベル
+                text: ' < ボートレース住之江 ボート１着率 一覧 > ' ,               //ラベル
             },
             scales:{
                 xAxes:[{
@@ -101,7 +101,7 @@ const DrawGraph3 = (dataon,datalist)=>{
             chart.data.datasets[0].data = BoatDict['oneave'];
             chart.data.datasets[0].borderColor ='cyan';
             chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
-            chart.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
+            chart.options.title.text = '< ボートレース住之江 ボート１着率 一覧 >';
             chart.update();
             console.log(BoatDict['threeave'])
         })
@@ -109,7 +109,7 @@ const DrawGraph3 = (dataon,datalist)=>{
             chart.data.datasets[0].data = BoatDict['twoave'];
             chart.data.datasets[0].borderColor ='cyan';
             chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
-            chart.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
+            chart.options.title.text = '< ボートレース住之江 ボート２連対率 一覧 >';
             chart.update();
             console.log(BoatDict['threeave'])
         })
@@ -117,7 +117,7 @@ const DrawGraph3 = (dataon,datalist)=>{
             chart.data.datasets[0].data = BoatDict['threeave'];
             chart.data.datasets[0].borderColor ='cyan';
             chart.data.datasets[0].backgroundColor = 'rgba(0,255,255,0.3)';
-            chart.options.title.text = '< ボートレース住之江 モーター２連対率 一覧 >';
+            chart.options.title.text = '< ボートレース住之江 ボート３連対率 一覧 >';
             chart.update();
             console.log(BoatDict['threeave'])
         })

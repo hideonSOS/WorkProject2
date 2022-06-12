@@ -75,3 +75,6 @@ def page6(request):
 
 def page7(request):
     return render(request, 'WorkApp2/page7.html')
+
+def page8(request):
+    return render(request, 'WorkApp2/page8.html')

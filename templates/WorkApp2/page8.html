@@ -1,0 +1,54 @@
+{% extends 'WorkApp2/template.html' %}
+{% load static %}
+{% block header %}
+    <link rel="stylesheet" href="{% static 'WorkApp2/page8.css' %}">
+{% endblock %}
+{% block body %}
+<div class="AreaOne">
+    <div class="one">
+        <!-- <span></span> -->
+        <span><img id='img1' src="{% static 'WorkApp2/images/piston.JPG' %}"></span>
+        <span><img id='img2' src="{% static 'WorkApp2/images/ring.JPG' %}"></span>
+        <span><img id='img3' src="{% static 'WorkApp2/images/giya.JPG' %}"></span>
+        
+        <span></span>
+        <span></span>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="{% static 'WorkApp2/page8.js' %}"></script>
+<script>
+    BigImg('#img1','piston.JPG');
+    BigImg('#img2','ring.JPG');
+    BigImg('#img3','giya.JPG');
+</script>
+{% endblock %}

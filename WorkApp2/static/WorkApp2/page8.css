@@ -1,0 +1,39 @@
+@media all and (max-width: 3000px) and (min-width: 1503px) {
+  .AreaOne {
+    border: solid;
+    border-color: white;
+    border-width: 3px;
+    height: 9000px;
+    margin-top: 5px;
+  }
+  .AreaOne div {
+    margin-top: 5px;
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+  }
+  .AreaOne div span {
+    border: solid;
+    border-color: yellow;
+    width: 19%;
+    height: 280px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+  .AreaOne div span img {
+    border: solid;
+    border-color: white;
+    width: 98%;
+    height: 98%;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img:hover {
+    border-color: red;
+  }
+}
+/*# sourceMappingURL=page8.css.map */

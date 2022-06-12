@@ -1,0 +1,88 @@
+$BorderValue:3px;
+$MarginValue:5px;
+$BtnColor:yellow;
+$BtnFontColor:black;
+$BtnWidth:70px;
+$BtnHeight:30px;
+
+$mobileA-color:white;
+$mobileA-max:3000px;
+$mobileA-min:1503px;
+$mobileA-height:680px;
+$mobileA-height2:1600px;
+
+$mobileB-color:cyan;
+$mobileB-max:1502px;
+$mobileB-min:1280px;
+$mobileB-height:680px;
+$mobileB-height2:1400px;
+
+$mobileC-color:red;
+$mobileC-max:1279px;
+$mobileC-min:1000px;
+$mobileC-height:680px;
+$mobileC-height2:1200px;
+
+$mobileD-color:yellow;
+$mobileD-max:999px;
+$mobileD-min:780px;
+$mobileD-height:480px;
+$mobileD-height2:1000px;
+
+$mobileE-color:pink;
+$mobileE-max:779px;
+$mobileE-min:480px;
+$mobileE-height:356px;
+$mobileE-height2:700px;
+
+$mobileF-color:lightgreen;
+$mobileF-all:480px;
+$mobileF-height:210px;
+$mobileF-height2:500px;
+
+$heightone:300px;
+$spanheight:280px;
+
+@media all and (max-width:$mobileA-max) and (min-width:$mobileA-min){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileA-color;
+        border-width:$BorderValue;
+        height:$heightone*30;
+        margin-top:$MarginValue;
+        div{
+            margin-top:$MarginValue;
+            border:solid;
+            border-color:cyan;
+            border-width:$BorderValue;
+            height:$heightone;
+            position:relative;
+            text-align: center;
+            
+            
+            span{
+                border:solid;
+                border-color:yellow;
+                width:19%;
+                height:$spanheight;
+                display:inline-block;
+                position:relative;
+                vertical-align: middle;
+                
+                img{
+                    border:solid;
+                    border-color:white;
+                    width:98%;
+                    height:98%;
+                    display:inline-block;
+                    position:relative;
+                    
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
