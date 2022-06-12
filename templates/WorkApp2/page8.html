@@ -2,20 +2,25 @@
 {% load static %}
 {% block header %}
     <link rel="stylesheet" href="{% static 'WorkApp2/page8.css' %}">
+    <link rel="stylesheet" href="{% static 'WorkApp2/destyle.css' %}">
 {% endblock %}
 {% block body %}
 <div class="AreaOne">
     <div class="one">
-        <!-- <span></span> -->
-        <span><img id='img1' src="{% static 'WorkApp2/images/piston.JPG' %}"></span>
-        <span><img id='img2' src="{% static 'WorkApp2/images/ring.JPG' %}"></span>
-        <span><img id='img3' src="{% static 'WorkApp2/images/giya.JPG' %}"></span>
         
-        <span></span>
-        <span></span>
+        <span><img id='img1' src="{% static 'WorkApp2/images/1.ring.JPG' %}"></span>
+        <span><img id='img2' src="{% static 'WorkApp2/images/2.piston.JPG' %}"></span>
+        <span><img id='img3' src="{% static 'WorkApp2/images/3.ring&piston.JPG' %}"></span>
+        <span><img id='img4' src="{% static 'WorkApp2/images/4.giya1.JPG' %}"></span>
+        <span><img id='img5' src="{% static 'WorkApp2/images/5.giya2.JPG' %}"></span>
+        <span><img id='img6' src="{% static 'WorkApp2/images/6.electric.JPG' %}"></span>
+        <span><img id='img7' src="{% static 'WorkApp2/images/7.gasorin.JPG' %}"></span>
+        <span><img id='img8' src="{% static 'WorkApp2/images/8.chiruto.JPG' %}"></span>
+        <span><img id='img9' src="{% static 'WorkApp2/images/9.syaft.JPG' %}"></span>
+        <span><img id='img10' src="{% static 'WorkApp2/images/3.ring&piston.JPG' %}"></span>
     </div>
-    <div></div>
-    <div></div>
+    <div class="two"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="three"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <div></div>
     <div></div>
     <div></div>
@@ -47,8 +52,15 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="{% static 'WorkApp2/page8.js' %}"></script>
 <script>
-    BigImg('#img1','piston.JPG');
-    BigImg('#img2','ring.JPG');
-    BigImg('#img3','giya.JPG');
+    BigImg('#img1','1.ring.JPG');
+    BigImg('#img2','2.piston.JPG');
+    BigImg('#img3','3.ring&piston.JPG');
+    BigImg('#img4','4.giya1.JPG');
+    BigImg('#img5','5.giya2.JPG');
+    BigImg('#img6','6.electric.JPG');
+    BigImg('#img7','7.gasorin.JPG');
+    BigImg('#img8','8.chiruto.JPG');
+    BigImg('#img9','9.syaft.JPG');
+    BigImg('#img10','3.ring&piston.JPG');
 </script>
 {% endblock %}

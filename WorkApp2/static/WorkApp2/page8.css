@@ -3,7 +3,6 @@
     border: solid;
     border-color: white;
     border-width: 3px;
-    height: 9000px;
     margin-top: 5px;
   }
   .AreaOne div {
@@ -11,18 +10,169 @@
     border: solid;
     border-color: cyan;
     border-width: 3px;
-    height: 300px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    text-align: center;
+  }
+  .AreaOne div span {
+    border: solid;
+    border-color: yellow;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    position: relative;
+    margin: 0.5%;
+  }
+  .AreaOne div span img {
+    border: solid;
+    border-color: white;
+    width: 98%;
+    height: 98%;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img:hover {
+    border-color: red;
+  }
+}
+
+@media all and (max-width: 1502px) and (min-width: 1280px) {
+  .AreaOne {
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .AreaOne div {
+    margin-top: 5px;
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    height: 150px;
+    position: relative;
+    text-align: center;
+    display: flex;
+  }
+  .AreaOne div span {
+    border: solid;
+    border-color: yellow;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    position: relative;
+    margin: 0.5%;
+  }
+  .AreaOne div span img {
+    border: solid;
+    border-color: white;
+    width: 98%;
+    height: 98%;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img:hover {
+    border-color: red;
+  }
+}
+
+@media all and (max-width: 1279px) and (min-width: 1000px) {
+  .AreaOne {
+    border: solid;
+    border-color: red;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .AreaOne div {
+    margin-top: 5px;
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    height: 150px;
     position: relative;
     text-align: center;
   }
   .AreaOne div span {
     border: solid;
     border-color: yellow;
-    width: 19%;
-    height: 280px;
+    width: 130px;
+    height: 130px;
     display: inline-block;
     position: relative;
-    vertical-align: middle;
+  }
+  .AreaOne div span img {
+    border: solid;
+    border-color: white;
+    width: 98%;
+    height: 98%;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img:hover {
+    border-color: red;
+  }
+}
+
+@media all and (max-width: 999px) and (min-width: 780px) {
+  .AreaOne {
+    border: solid;
+    border-color: yellow;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .AreaOne div {
+    margin-top: 5px;
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    height: 150px;
+    position: relative;
+    text-align: center;
+  }
+  .AreaOne div span {
+    border: solid;
+    border-color: yellow;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img {
+    border: solid;
+    border-color: white;
+    width: 98%;
+    height: 98%;
+    display: inline-block;
+    position: relative;
+  }
+  .AreaOne div span img:hover {
+    border-color: red;
+  }
+}
+
+@media all and (max-width: 779px) and (min-width: 480px) {
+  .AreaOne {
+    border: solid;
+    border-color: pink;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .AreaOne div {
+    margin-top: 5px;
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    height: 150px;
+    position: relative;
+    text-align: center;
+  }
+  .AreaOne div span {
+    border: solid;
+    border-color: yellow;
+    width: 9%;
+    height: 130px;
+    display: inline-block;
+    position: relative;
   }
   .AreaOne div span img {
     border: solid;

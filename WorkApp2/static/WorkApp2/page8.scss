@@ -40,15 +40,56 @@ $mobileF-all:480px;
 $mobileF-height:210px;
 $mobileF-height2:500px;
 
-$heightone:300px;
-$spanheight:280px;
+$heightone:150px;
+$spansize:130px;
 
 @media all and (max-width:$mobileA-max) and (min-width:$mobileA-min){
     .AreaOne{
         border:solid;
         border-color:$mobileA-color;
         border-width:$BorderValue;
-        height:$heightone*30;
+        margin-top:$MarginValue;
+        div{
+            margin-top:$MarginValue;
+            border:solid;
+            border-color:cyan;
+            border-width:$BorderValue;
+            height:$heightone;
+            position:relative;
+            
+            display:flex;
+            text-align: center;
+            span{
+                border:solid;
+                border-color:yellow;
+                width:$spansize;
+                height:$spansize;
+                display:inline-block;
+                position:relative;
+                margin:0.5%;
+                img{
+                    border:solid;
+                    border-color:white;
+                    width:98%;
+                    height:98%;
+                    display:inline-block;
+                    position:relative;
+                    
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
+
+@media all and (max-width:$mobileB-max) and (min-width:$mobileB-min){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileB-color;
+        border-width:$BorderValue;
         margin-top:$MarginValue;
         div{
             margin-top:$MarginValue;
@@ -58,17 +99,139 @@ $spanheight:280px;
             height:$heightone;
             position:relative;
             text-align: center;
-            
-            
+            display:flex;
+        
             span{
                 border:solid;
                 border-color:yellow;
-                width:19%;
-                height:$spanheight;
+                width:$spansize;
+                height:$spansize;
                 display:inline-block;
                 position:relative;
-                vertical-align: middle;
-                
+                margin:0.5%;
+                img{
+                    border:solid;
+                    border-color:white;
+                    width:98%;
+                    height:98%;
+                    display:inline-block;
+                    position:relative;
+                    
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
+
+
+@media all and (max-width:$mobileC-max) and (min-width:$mobileC-min){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileC-color;
+        border-width:$BorderValue;
+        margin-top:$MarginValue;
+        div{
+            margin-top:$MarginValue;
+            border:solid;
+            border-color:cyan;
+            border-width:$BorderValue;
+            height:$heightone;
+            position:relative;
+            text-align: center;
+        
+            span{
+                border:solid;
+                border-color:yellow;
+                width:$spansize;
+                height:$spansize;
+                display:inline-block;
+                position:relative;
+                img{
+                    border:solid;
+                    border-color:white;
+                    width:98%;
+                    height:98%;
+                    display:inline-block;
+                    position:relative;
+                    
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
+
+
+@media all and (max-width:$mobileD-max) and (min-width:$mobileD-min){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileD-color;
+        border-width:$BorderValue;
+        margin-top:$MarginValue;
+        div{
+            margin-top:$MarginValue;
+            border:solid;
+            border-color:cyan;
+            border-width:$BorderValue;
+            height:$heightone;
+            position:relative;
+            text-align: center;
+        
+            span{
+                border:solid;
+                border-color:yellow;
+                width:$spansize;
+                height:$spansize;
+                display:inline-block;
+                position:relative;
+                img{
+                    border:solid;
+                    border-color:white;
+                    width:98%;
+                    height:98%;
+                    display:inline-block;
+                    position:relative;
+                    
+                    &:hover{
+                        border-color:red;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
+
+
+@media all and (max-width:$mobileE-max) and (min-width:$mobileE-min){
+    .AreaOne{
+        border:solid;
+        border-color:$mobileE-color;
+        border-width:$BorderValue;
+        margin-top:$MarginValue;
+        div{
+            margin-top:$MarginValue;
+            border:solid;
+            border-color:cyan;
+            border-width:$BorderValue;
+            height:$heightone;
+            position:relative;
+            text-align: center;
+        
+            span{
+                border:solid;
+                border-color:yellow;
+                width:9%;
+                height:$spansize;
+                display:inline-block;
+                position:relative;
                 img{
                     border:solid;
                     border-color:white;
