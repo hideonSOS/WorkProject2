@@ -143,3 +143,40 @@ def Scraper4(url,tag):
         dict['total'].append(dict['toban'][i]+' ' + dict['name'][i]+' '+dict['rank'][i]+' '+dict['age'][i])
 
     return dict
+
+
+def Scraper5(url,tag):
+    
+    headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36'}
+    html = requests.get(url,headers=headers)
+    soup = BeautifulSoup(html.content, 'html.parser')
+    haco=[]
+    dict={
+    'no':[],
+    'totalrun':[],
+    'oneave':[],
+    'twoave':[],
+    'threeave':[],
+    'rap':[],
+    }
+    elems = soup.find_all(tag)
+    for i in elems:
+        haco.append(i.text)
+    for i,elem in enumerate(haco):
+        if i==0 or i%10==0:
+            dict['no'].append(elem)
+        elif i==1 or i%10==1:
+            dict['totalrun'].append(elem)
+        elif i==3 or i%10==3:
+            dict['oneave'].append(re.sub(' %','',elem))
+        elif i==4 or i%10==4:
+            dict['twoave'].append(re.sub(' %','',elem))
+        elif i==5 or i%10==5:
+            dict['threeave'].append(re.sub(' %','',elem))
+        elif i==9or i%10==9:
+            dict['rap'].append(elem)
+        
+    # for i in range(len(dict['toban'])):
+    #     dict['total'].append(dict['toban'][i]+' ' + dict['name'][i]+' '+dict['rank'][i]+' '+dict['age'][i])
+
+    return dict

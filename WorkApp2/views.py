@@ -53,7 +53,7 @@ def page2(request):
 
 
 def page3(request):
-    target_url = 'https://www.boatrace-suminoe.jp/modules/raceinfo/?page=index_tokutenrank'
+    target_url = 'http://www.boatrace-db.net/stadium/boat/pid/12/'
     selector = 'td'
     RankDict = MyFunction.page3_Scraper(target_url,selector)
     return render(request, 'WorkApp2/page3.html',{'RankDict':RankDict})
@@ -66,7 +66,12 @@ def page5(request):
     return render(request, 'WorkApp2/page5.html')
 
 def page6(request):
-    return render(request, 'WorkApp2/page6.html')
+    target_url = 'http://www.boatrace-db.net/stadium/boat/pid/12/'
+    selector = 'td'
+    BoatDict=MyFunction.Scraper5(target_url,selector)
+    
+    
+    return render(request, 'WorkApp2/page6.html',{'BoatDict':BoatDict})
 
 def page7(request):
     return render(request, 'WorkApp2/page7.html')

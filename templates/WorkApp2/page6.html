@@ -7,12 +7,22 @@
 {% endblock %}
 
 {% block body %}
-    <div class="AreaOne">
-        <div class="one">
-            <canvas id="bar"></canvas>
-        </div>
-        <div class="two">
-
-        </div>
+    <div class="AreaOne"> 
+        <canvas id="bar"></canvas>
     </div>
+    <div class="BtnArea">
+        <button text="push" id="btn1" name="btn1">１着率</button>
+        <button text="push" id="btn2" name="btn2">２連対率</button>
+        <button text="push" id="btn3" name="btn3">３連対率</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'WorkApp2/page6.js' %}"></script>
+    <script>
+        {% autoescape off %}
+            let BoatDict = {{ BoatDict }}
+        {% endautoescape %}
+        DrawGraph3(BoatDict,BoatDict['twoave'])
+        
+    </script>
+    
 {% endblock %}

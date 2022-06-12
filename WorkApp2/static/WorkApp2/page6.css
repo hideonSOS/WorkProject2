@@ -1,8 +1,135 @@
 @media all and (max-width: 3000px) and (min-width: 1503px) {
   .AreaOne {
     border: solid;
-    border-color: 5px;
+    border-color: white;
+    border-width: 3px;
     margin-top: 5px;
+    height: 680px;
+  }
+  .BtnArea {
+    border: solid;
+    border-color: white;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .BtnArea button {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .BtnArea button:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+@media all and (max-width: 1502px) and (min-width: 1280px) {
+  .AreaOne {
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    margin-top: 5px;
+    height: 680px;
+  }
+  .BtnArea {
+    border: solid;
+    border-color: cyan;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .BtnArea button {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .BtnArea button:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+@media all and (max-width: 1279px) and (min-width: 1000px) {
+  .AreaOne {
+    border: solid;
+    border-color: red;
+    border-width: 3px;
+    margin-top: 5px;
+    height: 680px;
+  }
+  .BtnArea {
+    border: solid;
+    border-color: red;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .BtnArea button {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .BtnArea button:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+@media all and (max-width: 999px) and (min-width: 780px) {
+  .AreaOne {
+    border: solid;
+    border-color: yellow;
+    border-width: 3px;
+    margin-top: 5px;
+    height: 480px;
+  }
+  .BtnArea {
+    border: solid;
+    border-color: yellow;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .BtnArea button {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .BtnArea button:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+@media all and (max-width: 779px) and (min-width: 480px) {
+  .AreaOne {
+    border: solid;
+    border-color: pink;
+    border-width: 3px;
+    margin-top: 5px;
+    height: 356px;
+  }
+  .BtnArea {
+    border: solid;
+    border-color: pink;
+    border-width: 3px;
+    margin-top: 5px;
+  }
+  .BtnArea button {
+    background-color: yellow;
+    color: black;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .BtnArea button:hover {
+    background-color: red;
+    color: white;
   }
 }
 /*# sourceMappingURL=page6.css.map */
