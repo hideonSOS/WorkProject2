@@ -25,7 +25,7 @@ def page1(request):
     if request.method=='POST':
         mno = request.POST.get('input1')
         target_url = 'http://www.boatrace-db.net/stadium/mdetail/pid/12/mno/'+str(mno)+'/'
-        target_tag = 'p'
+        target_tag = 'a'
         target_url2 = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=9&select=9'
         # 艇国データ
         dict['one'] = MyFunction.Scraper4(target_url,target_tag)
@@ -44,7 +44,7 @@ def page1(request):
 
 def page2(request):
 
-    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=9'
+    target_url = 'https://www.boatrace-suminoe.jp/modules/datafile/?page=index_mrankdtl&dtl=7&select=8'
     
     MotorDict=MyFunction.Scraper(target_url,'td')
     
@@ -64,17 +64,3 @@ def page4(request):
 
 def page5(request):
     return render(request, 'WorkApp2/page5.html')
-
-def page6(request):
-    target_url = 'http://www.boatrace-db.net/stadium/boat/pid/12/'
-    selector = 'td'
-    BoatDict=MyFunction.Scraper5(target_url,selector)
-    
-    
-    return render(request, 'WorkApp2/page6.html',{'BoatDict':BoatDict})
-
-def page7(request):
-    return render(request, 'WorkApp2/page7.html')
-
-def page8(request):
-    return render(request, 'WorkApp2/page8.html')
